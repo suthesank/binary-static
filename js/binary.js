@@ -9694,9 +9694,7 @@ var BinaryLoader = function () {
         ContentVisibility.init().then(function () {
             BinarySocket.wait('authorize', 'website_status', 'landing_company').then(function () {
                 GTM.pushDataLayer({ event: 'page_load' }); // we need website_status.clients_country
-                setTimeout(function () {
-                    return LiveChat.init();
-                }, 1500);
+                LiveChat.init();
 
                 // first time load.
                 var last_image = $('#content img').last();
@@ -11034,13 +11032,13 @@ var Header = function () {
                     return buildMessage(localizeKeepPlaceholders('Your [_1]proof of address[_2] has expired.'), 'user/authenticate', '?authentication_tab=poa');
                 },
                 rejected: function rejected() {
-                    return buildSpecificMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_3] and [_2]proof of address[_3] have not been verified. Please check your email for details.'), ['<a href=\'' + Url.urlFor('user/authenticate') + '\'>', '<a href=\'' + Url.urlFor('user/authenticate') + '?authentication_tab=poa\'>', '</a>']);
+                    return buildSpecificMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_3] and [_2]proof of address[_3] have not been verified.'), ['<a href=\'' + Url.urlFor('user/authenticate') + '\'>', '<a href=\'' + Url.urlFor('user/authenticate') + '?authentication_tab=poa\'>', '</a>']);
                 },
                 rejected_identity: function rejected_identity() {
                     return buildMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_2] has not been verified.'), 'user/authenticate');
                 },
                 rejected_document: function rejected_document() {
-                    return buildMessage(localizeKeepPlaceholders('Your [_1]proof of address[_2] has not been verified. Please check your email for details.'), 'user/authenticate', '?authentication_tab=poa');
+                    return buildMessage(localizeKeepPlaceholders('Your [_1]proof of address[_2] has not been verified.'), 'user/authenticate', '?authentication_tab=poa');
                 },
                 identity: function identity() {
                     return buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of identity[_2].'), 'user/authenticate');
@@ -11554,6 +11552,9 @@ var Page = function () {
                 if (!ClientBase.get('is_virtual')) {
                     // TODO: uncomment below to enable interview popup dialog
                     // InterviewPopup.onLoad();
+                }
+                if (window.location.href.indexOf('?data-elevio-article=') > 0) {
+                    Elevio.injectElevio();
                 }
             }
             Header.onLoad();
@@ -26983,46 +26984,66 @@ var Authenticate = function () {
                             break;
 
                         case 41:
-                            initOnfido(service_token_response.token, documents_supported);
+                            // eslint-disable-next-line no-lonely-if
+                            if (onfido_unsupported) {
+                                $('#not_authenticated_uns').setVisibility(1);
+                                initUnsupported();
+                            } else {
+                                initOnfido(service_token_response.token, documents_supported);
+                            }
 
                         case 42:
+                            if (document.further_resubmissions_allowed) {
+                                _context2.next = 62;
+                                break;
+                            }
+
                             _context2.t1 = document.status;
-                            _context2.next = _context2.t1 === 'none' ? 45 : _context2.t1 === 'pending' ? 48 : _context2.t1 === 'rejected' ? 50 : _context2.t1 === 'suspected' ? 52 : _context2.t1 === 'verified' ? 54 : _context2.t1 === 'expired' ? 56 : 58;
+                            _context2.next = _context2.t1 === 'none' ? 46 : _context2.t1 === 'pending' ? 49 : _context2.t1 === 'rejected' ? 51 : _context2.t1 === 'suspected' ? 53 : _context2.t1 === 'verified' ? 55 : _context2.t1 === 'expired' ? 57 : 59;
                             break;
 
-                        case 45:
+                        case 46:
                             init();
                             $('#not_authenticated').setVisibility(1);
-                            return _context2.abrupt('break', 59);
+                            return _context2.abrupt('break', 60);
 
-                        case 48:
+                        case 49:
                             $('#pending_poa').setVisibility(1);
-                            return _context2.abrupt('break', 59);
+                            return _context2.abrupt('break', 60);
 
-                        case 50:
+                        case 51:
                             $('#unverified_poa').setVisibility(1);
-                            return _context2.abrupt('break', 59);
+                            return _context2.abrupt('break', 60);
 
-                        case 52:
+                        case 53:
                             $('#unverified_poa').setVisibility(1);
-                            return _context2.abrupt('break', 59);
+                            return _context2.abrupt('break', 60);
 
-                        case 54:
+                        case 55:
                             $('#verified_poa').setVisibility(1);
-                            return _context2.abrupt('break', 59);
+                            return _context2.abrupt('break', 60);
 
-                        case 56:
+                        case 57:
                             $('#expired_poa').setVisibility(1);
-                            return _context2.abrupt('break', 59);
-
-                        case 58:
-                            return _context2.abrupt('break', 59);
+                            return _context2.abrupt('break', 60);
 
                         case 59:
+                            return _context2.abrupt('break', 60);
+
+                        case 60:
+                            _context2.next = 64;
+                            break;
+
+                        case 62:
+                            init();
+                            $('#not_authenticated').setVisibility(1);
+
+                        case 64:
+
                             $('#authentication_loading').setVisibility(0);
                             TabSelector.updateTabDisplay();
 
-                        case 61:
+                        case 66:
                         case 'end':
                             return _context2.stop();
                     }
@@ -35746,7 +35767,7 @@ var ViewPopup = function () {
                                 }
                                 containerSetText('trade_details_message', contract.validation_error && !is_unsupported_contract ? contract.validation_error : '&nbsp;');
                                 if (is_unsupported_contract) {
-                                    redirect = '<a href="https://deriv.app" target="_blank" rel="noopener noreferrer">';
+                                    redirect = '<a href="https://app.deriv.com" target="_blank" rel="noopener noreferrer">';
                                     redirect_close = '</a>';
                                     message = Callputspread.isCallputspread(contract.contract_type) ? localize('This contract is only available on [_1]DTrader[_2].', [redirect, redirect_close]) : localize('This contract is only available on DTrader.[_1][_2]Go to Dtrader[_3] to close or cancel this contract.', ['<br/>', redirect, redirect_close]);
 
@@ -36985,7 +37006,6 @@ var BinarySocket = __webpack_require__(/*! ../../app/base/socket */ "./src/javas
 var FormManager = __webpack_require__(/*! ../../app/common/form_manager */ "./src/javascript/app/common/form_manager.js");
 var getFormRequest = __webpack_require__(/*! ../../app/common/verify_email */ "./src/javascript/app/common/verify_email.js");
 var isBinaryApp = __webpack_require__(/*! ../../config */ "./src/javascript/config.js").isBinaryApp;
-var Elevio = __webpack_require__(/*! ../../_common/base/elevio */ "./src/javascript/_common/base/elevio.js");
 
 var Home = function () {
     var clients_country = void 0;
@@ -36993,10 +37013,6 @@ var Home = function () {
     var onLoad = function onLoad() {
         Login.initOneAll();
         TabSelector.onLoad();
-
-        if (window.location.href.indexOf('?data-elevio-article=') > 0) {
-            Elevio.injectElevio();
-        }
 
         BinarySocket.wait('website_status', 'authorize', 'landing_company').then(function () {
             clients_country = State.getResponse('website_status.clients_country');
