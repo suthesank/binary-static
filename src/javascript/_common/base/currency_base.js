@@ -25,10 +25,10 @@ const formatMoney = (currency_value, amount, exclude_currency, decimals = 0, min
         money = addComma(money, decimal_places);
     }
 
-    return sign + (exclude_currency ? '' : formatCurrency(currency_value)) + money;
+    return sign + (exclude_currency ? '' : money + formatCurrency(currency_value));
 };
 
-const formatCurrency = currency => `<span class="symbols ${(currency || '').toLowerCase()}"></span>`; // defined in binary-style
+const formatCurrency = currency => `<span class="symbols">&nbsp;${(currency || '')}</span>`; // defined in binary-style
 
 const addComma = (num, decimal_points, is_crypto) => {
     let number = String(num || 0).replace(/,/g, '');
