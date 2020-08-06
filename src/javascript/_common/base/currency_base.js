@@ -25,7 +25,7 @@ const formatMoney = (currency_value, amount, exclude_currency, decimals = 0, min
         money = addComma(money, decimal_places);
     }
 
-    return sign + (exclude_currency ? '' : money + formatCurrency(currency_value));
+    return sign + (exclude_currency ? money : money + formatCurrency(currency_value));
 };
 
 const formatCurrency = currency => `<span class="symbols">&nbsp;${(currency || '')}</span>`; // defined in binary-style
