@@ -28,7 +28,7 @@ const formatMoney = (currency_value, amount, exclude_currency, decimals = 0, min
     return sign + (exclude_currency ? money : money + formatCurrency(currency_value));
 };
 
-const formatCurrency = currency => `<span class="symbols">&nbsp;${(currency || '')}</span>`; // defined in binary-style
+const formatCurrency = currency => `<span class="symbols">&nbsp;${getCurrencyDisplayCode(currency)}</span>`; // defined in binary-style
 
 const addComma = (num, decimal_points, is_crypto) => {
     let number = String(num || 0).replace(/,/g, '');
@@ -67,13 +67,15 @@ const CryptoConfig = (() => {
         ETC  : { display_code: 'ETC',   name: localize('Ether Classic'),    min_withdrawal: 0.002, pa_max_withdrawal: 5,    pa_min_withdrawal: 0.002 },
         LTC  : { display_code: 'LTC',   name: localize('Litecoin'),         min_withdrawal: 0.002, pa_max_withdrawal: 5,    pa_min_withdrawal: 0.002 },
         IDK  : { display_code: 'IDK',   name: localize('IDK'),              min_withdrawal: 0.002, pa_max_withdrawal: 5,    pa_min_withdrawal: 0.002  },
-        BUSD : { display_code: 'BUSD',  name: localize('Binance USD'),      min_withdrawal: 0.02, pa_max_withdrawal: 2000,    pa_min_withdrawal: 10 },
+        BUSD : { display_code: 'BUSD',  name: localize('Binance USD'),      min_withdrawal: 0.02, pa_max_withdrawal: 2000,  pa_min_withdrawal: 10 },
         DAI  : { display_code: 'DAI',   name: localize('Multi-Collateral'), min_withdrawal: 0.002, pa_max_withdrawal: 5,    pa_min_withdrawal: 0.002  },
-        EURS : { display_code: 'EURS',  name: localize('STASIS Euro'),      min_withdrawal: 0.02, pa_max_withdrawal: 2000,    pa_min_withdrawal: 10 },
-        PAX  : { display_code: 'PAX',   name: localize('Paxos Standard'),   min_withdrawal: 0.02, pa_max_withdrawal: 2000,    pa_min_withdrawal: 10 },
-        TUSD : { display_code: 'TUSD',  name: localize('True USD'),         min_withdrawal: 0.02, pa_max_withdrawal: 2000,    pa_min_withdrawal: 10 },
-        USDC : { display_code: 'USDC',  name: localize('USD Coin'),         min_withdrawal: 0.02, pa_max_withdrawal: 2000,    pa_min_withdrawal: 10 },
+        EURS : { display_code: 'EURS',  name: localize('STASIS Euro'),      min_withdrawal: 0.02, pa_max_withdrawal: 2000,  pa_min_withdrawal: 10 },
+        PAX  : { display_code: 'PAX',   name: localize('Paxos Standard'),   min_withdrawal: 0.02, pa_max_withdrawal: 2000,  pa_min_withdrawal: 10 },
+        TUSD : { display_code: 'TUSD',  name: localize('True USD'),         min_withdrawal: 0.02, pa_max_withdrawal: 2000,  pa_min_withdrawal: 10 },
+        USDC : { display_code: 'USDC',  name: localize('USD Coin'),         min_withdrawal: 0.02, pa_max_withdrawal: 2000,  pa_min_withdrawal: 10 },
+        USDK : { display_code: 'USDK',  name: localize('USDK'),             min_withdrawal: 0.02, pa_max_withdrawal: 2000,  pa_min_withdrawal: 10 },
         UST  : { display_code: 'USDT',  name: localize('Tether Omni'),      min_withdrawal: 0.02,  pa_max_withdrawal: 2000, pa_min_withdrawal: 10 },
+        USDT : { display_code: 'USDT',  name: localize('Tether Omni'),      min_withdrawal: 0.02,  pa_max_withdrawal: 2000, pa_min_withdrawal: 10 },
         eUSDT: { display_code: 'eUSDT', name: localize('Tether ERC20'),     min_withdrawal: 0.02,  pa_max_withdrawal: 2000, pa_min_withdrawal: 10 },
         USB  : { display_code: 'USB',   name: localize('Binary Coin'),      min_withdrawal: 0.02,  pa_max_withdrawal: 2000, pa_min_withdrawal: 10 },
     });
@@ -125,7 +127,9 @@ const getPaWithdrawalLimit = (currency, limit) => {
     return limit === 'max' ? 2000 : 10; // limits for fiat currency
 };
 
-const getCurrencyDisplayCode = currency => getPropertyValue(CryptoConfig.get(), [currency, 'display_code']) || currency;
+const unifyUST = currency => /UST/.test(currency) ? 'USDT' : currency; // TODO Remove once BE sends a unique currency
+
+const getCurrencyDisplayCode = currency => unifyUST(getPropertyValue(CryptoConfig.get(), [currency, 'display_code']) || currency);
 
 const getCurrencyName = currency => getPropertyValue(CryptoConfig.get(), [currency, 'name']) || '';
 
