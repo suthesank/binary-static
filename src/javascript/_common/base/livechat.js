@@ -37,6 +37,15 @@ const LiveChat = (() => {
                 }
 
                 if (visibility === 'maximized' && !ClientBase.isLoggedIn()) {
+                    if (
+                        !(
+                            window.LiveChatWidget.get('customer_data').status ===
+                            'chatting'
+                        )
+                    ) {
+                        window.LiveChatWidget.call('set_customer_email', ' ');
+                        window.LiveChatWidget.call('set_customer_name', ' ');
+                    }
                     window.LiveChatWidget.call('set_session_variables', initial_session_variables);
                 }
             });
