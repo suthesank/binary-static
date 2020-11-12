@@ -1311,13 +1311,10 @@ module.exports = GTM;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-// import { init as SDKinit } from '@livechat/customer-sdk';
-
 var BinarySocket = __webpack_require__(/*! ./socket_base */ "./src/javascript/_common/base/socket_base.js");
 var ClientBase = __webpack_require__(/*! ./client_base */ "./src/javascript/_common/base/client_base.js");
 
 var LiveChat = function () {
-    // let logged_in = false;
     var initial_session_variables = { loginid: '', landing_company_shortcode: '', currency: '', residence: '', email: '' };
     var init = function init() {
         if (window.LiveChatWidget) {
@@ -1334,47 +1331,6 @@ var LiveChat = function () {
                 if (first_name && last_name) window.LiveChatWidget.call('set_customer_name', first_name + ' ' + last_name);
             });
 
-            // const customerSDK = SDKinit({
-            //     licenseId: 12049137,
-            //     clientId : '66aa088aad5a414484c1fd1fa8a5ace7',
-            // });
-
-            // const checkLoginStatus = () => {
-            //     if (ClientBase.isLoggedIn()) {
-            //         if (logged_in === false) {
-            //             const loginid = ClientBase.get('loginid');
-            //             const landing_company_shortcode = ClientBase.get('landing_company_shortcode');
-            //             const currency = ClientBase.get('currency');
-            //             const residence = ClientBase.get('residence');
-            //             const email = ClientBase.get('email');
-
-            //             const client_session_variables = {
-            //                 ...loginid && { loginid },
-            //                 ...landing_company_shortcode && { landing_company_shortcode },
-            //                 ...currency && { currency },
-            //                 ...residence && { residence },
-            //                 ...email && { email },
-            //             };
-
-            //             window.LiveChatWidget.call('set_session_variables', client_session_variables);
-            //             // do logged in stuffs
-            //         }
-            //         logged_in = true;
-            //     } else {
-            //         if (logged_in === true) {
-            //             if (window.LiveChatWidget.get('chat_data')) {
-            //                 const chatID = window.LiveChatWidget.get('chat_data').chatId;
-            //                 customerSDK.deactivateChat({ chatId: chatID });
-            //             }
-            //             window.LiveChatWidget.call('set_customer_email', ' ');
-            //             window.LiveChatWidget.call('set_customer_name', ' ');
-            //         }
-            //         logged_in = false;
-            //     }
-            // };
-
-            // setInterval(checkLoginStatus, 500);
-
             window.LiveChatWidget.on('visibility_changed', function (_ref) {
                 var visibility = _ref.visibility;
 
@@ -1389,14 +1345,6 @@ var LiveChat = function () {
                     var client_session_variables = _extends({}, loginid && { loginid: loginid }, landing_company_shortcode && { landing_company_shortcode: landing_company_shortcode }, currency && { currency: currency }, residence && { residence: residence }, email && { email: email });
 
                     window.LiveChatWidget.call('set_session_variables', client_session_variables);
-                }
-
-                if (visibility === 'maximized' && !ClientBase.isLoggedIn()) {
-                    if (!(window.LiveChatWidget.get('customer_data').status === 'chatting')) {
-                        window.LiveChatWidget.call('set_customer_email', ' ');
-                        window.LiveChatWidget.call('set_customer_name', ' ');
-                    }
-                    window.LiveChatWidget.call('set_session_variables', initial_session_variables);
                 }
             });
         }
@@ -10362,6 +10310,9 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+var _require = __webpack_require__(/*! @livechat/customer-sdk */ "./node_modules/@livechat/customer-sdk/dist/customer-sdk.esm.js"),
+    init = _require.init;
+
 var BinarySocket = __webpack_require__(/*! ./socket */ "./src/javascript/app/base/socket.js");
 var Defaults = __webpack_require__(/*! ../pages/trade/defaults */ "./src/javascript/app/pages/trade/defaults.js");
 var RealityCheckData = __webpack_require__(/*! ../pages/user/reality_check/reality_check.data */ "./src/javascript/app/pages/user/reality_check/reality_check.data.js");
@@ -10440,8 +10391,31 @@ var Client = function () {
         });
     };
 
+    var endLiveChat = function endLiveChat() {
+        var customerSDK = init({
+            licenseId: 12049137,
+            clientId: '66aa088aad5a414484c1fd1fa8a5ace7'
+        });
+
+        customerSDK.on('connected', function () {
+            if (window.LiveChatWidget.get('chat_data')) {
+                var _window$LiveChatWidge = window.LiveChatWidget.get('chat_data'),
+                    chatId = _window$LiveChatWidge.chatId,
+                    threadId = _window$LiveChatWidge.threadId;
+
+                if (threadId) {
+                    customerSDK.deactivateChat({ chatId: chatId });
+                }
+            }
+        });
+
+        window.LiveChatWidget.call('set_customer_email', ' ');
+        window.LiveChatWidget.call('set_customer_name', ' ');
+    };
+
     var doLogout = function doLogout(response) {
         if (response.logout !== 1) return;
+        endLiveChat();
         removeCookies('login', 'loginid', 'loginid_list', 'email', 'residence', 'settings'); // backward compatibility
         removeCookies('reality_check', 'affiliate_token', 'affiliate_tracking', 'onfido_token');
         // clear elev.io session storage
