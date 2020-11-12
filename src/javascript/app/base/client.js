@@ -1,3 +1,4 @@
+const { init }           = require('@livechat/customer-sdk');
 const BinarySocket       = require('./socket');
 const Defaults           = require('../pages/trade/defaults');
 const RealityCheckData   = require('../pages/user/reality_check/reality_check.data');
@@ -74,8 +75,28 @@ const Client = (() => {
         });
     };
 
+    const endLiveChat = () => {
+        const customerSDK = init({
+            licenseId: 12049137,
+            clientId : '66aa088aad5a414484c1fd1fa8a5ace7',
+        });
+    
+        customerSDK.on('connected', () => {
+            if (window.LiveChatWidget.get('chat_data')) {
+                const { chatId, threadId } = window.LiveChatWidget.get('chat_data');
+                if (threadId) {
+                    customerSDK.deactivateChat({ chatId });
+                }
+            }
+        });
+
+        window.LiveChatWidget.call('set_customer_email', ' ');
+        window.LiveChatWidget.call('set_customer_name', ' ');
+    };
+
     const doLogout = (response) => {
         if (response.logout !== 1) return;
+        endLiveChat();
         removeCookies('login', 'loginid', 'loginid_list', 'email', 'residence', 'settings'); // backward compatibility
         removeCookies('reality_check', 'affiliate_token', 'affiliate_tracking', 'onfido_token');
         // clear elev.io session storage
