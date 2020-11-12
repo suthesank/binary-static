@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=latin,vietnamese,cyrillic-ext,latin-ext,cyrillic");
-@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,700&display=swap&subset=cyrillic,cyrillic-ext,latin-ext,vietnamese");
 /* stylelint-disable color-no-hex */
 /* stylelint-enable color-no-hex */
 /* stylelint-disable color-no-hex */
@@ -86,7 +85,7 @@ table {
 
 body {
   background: #2a3052;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: roboto, sans-serif;
   font-size: 18px;
   color: #fff;
   overflow-x: hidden; }
