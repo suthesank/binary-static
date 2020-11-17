@@ -10326,6 +10326,8 @@ var applyToAllElements = __webpack_require__(/*! ../../_common/utility */ "./src
 var getPropertyValue = __webpack_require__(/*! ../../_common/utility */ "./src/javascript/_common/utility.js").getPropertyValue;
 
 var Client = function () {
+    var licenseID = 12049137;
+    var clientID = '66aa088aad5a414484c1fd1fa8a5ace7';
     var processNewAccount = function processNewAccount(options) {
         if (ClientBase.setNewAccount(options)) {
             window.location.href = options.redirect_url || defaultRedirectUrl(); // need to redirect not using pjax
@@ -10393,8 +10395,8 @@ var Client = function () {
 
     var endLiveChat = function endLiveChat() {
         var customerSDK = init({
-            licenseId: 12049137,
-            clientId: '66aa088aad5a414484c1fd1fa8a5ace7'
+            licenseId: licenseID,
+            clientId: clientID
         });
 
         customerSDK.on('connected', function () {
