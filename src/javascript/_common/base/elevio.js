@@ -7,15 +7,6 @@ const createElement = require('../utility').createElement;
 const isLoginPages  = require('../utility').isLoginPages;
 
 const Elevio = (() => {
-    // function httpGetAsync(theUrl, callback){
-    //     const xmlHttp = new XMLHttpRequest();
-    //     xmlHttp.onreadystatechange = function() {
-    //         callback(xmlHttp.status);
-    //     };
-    //     xmlHttp.open('GET', theUrl, true); // true for asynchronous
-    //     xmlHttp.send(null);
-    // }
-
     const el_shell_id = 'elevio-shell';
     let el_shell;
 
@@ -25,9 +16,6 @@ const Elevio = (() => {
         el_shell = document.getElementById(el_shell_id);
 
         el_shell.addEventListener('click', () => injectElevio(true));
-        // httpGetAsync('https://cdn.elev.io/sdk/bootloader/v4/elevio-bootloader.js?cid=5bbc2de0b7365', (response) => {
-        //     console.log(response); //eslint-disable-line
-        // });
     };
 
     const injectElevio = (is_open = false) => {
