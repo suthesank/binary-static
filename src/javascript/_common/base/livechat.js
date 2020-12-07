@@ -2,9 +2,31 @@ const BinarySocket = require('./socket_base');
 const ClientBase = require('./client_base');
 
 const LiveChat = (() => {
+    const elevio_account_id = '5bbc2de0b7365';
+    function httpGetAsync(theUrl, callback){
+        const xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() {
+            if (xmlHttp.status !== 0){
+                callback(xmlHttp.status);
+            }
+        };
+        xmlHttp.open('GET', theUrl, true); // true for asynchronous
+        xmlHttp.send(null);
+    }
+
+    const livechat_id = 'gtm-deriv-livechat';
+    let livechat_shell;
     const initial_session_variables = { loginid: '', landing_company_shortcode: '', currency: '', residence: '', email: '' };
     const init = () => {
         if (window.LiveChatWidget) {
+            httpGetAsync(`https://cdn.elev.io/sdk/bootloader/v4/elevio-bootloader.js?cid=${elevio_account_id}`, (response) => {
+                if (response !== 200) {
+                    livechat_shell = document.getElementById(livechat_id);
+                    livechat_shell.style.display = 'flex';
+                    livechat_shell.addEventListener('click', () => window.LC_API.open_chat_window());
+                }
+            });
+            
             window.LiveChatWidget.call('set_session_variables', initial_session_variables);
 
             BinarySocket.wait('get_settings').then((response) => {
