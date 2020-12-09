@@ -1325,7 +1325,6 @@ var BinarySocket = __webpack_require__(/*! ./socket_base */ "./src/javascript/_c
 var ClientBase = __webpack_require__(/*! ./client_base */ "./src/javascript/_common/base/client_base.js");
 
 var LiveChat = function () {
-    var LC_API = window.LC_API || {};
     var initial_session_variables = { loginid: '', landing_company_shortcode: '', currency: '', residence: '', email: '' };
     var init = function init() {
         if (window.LiveChatWidget) {
@@ -1343,19 +1342,12 @@ var LiveChat = function () {
                     if (first_name && last_name) window.LiveChatWidget.call('set_customer_name', first_name + ' ' + last_name);
                 });
 
-                LC_API.on_after_load = function () {
+                window.LC_API.on_chat_ended = function () {
                     if (!ClientBase.isLoggedIn()) {
                         window.LiveChatWidget.call('set_customer_email', ' ');
                         window.LiveChatWidget.call('set_customer_name', ' ');
                     }
                 };
-
-                // window.LC_API.on_chat_ended = () => {
-                //     if (!ClientBase.isLoggedIn()){
-                //         window.LiveChatWidget.call('set_customer_email', ' ');
-                //         window.LiveChatWidget.call('set_customer_name', ' ');
-                //     }
-                // };
 
                 window.LiveChatWidget.on('visibility_changed', function (_ref) {
                     var visibility = _ref.visibility;
@@ -9750,7 +9742,6 @@ var BinaryLoader = function () {
             window.LiveChatWidget.on('ready', function () {
                 if (window.LiveChatWidget.get('customer_data').status !== 'chatting') {
                     window.LiveChatWidget.call('destroy');
-                    console.log('livechat destroyed'); //eslint-disable-line
                 }
             });
         }
@@ -9799,11 +9790,9 @@ var BinaryLoader = function () {
                 if (!window.LiveChatWidget) {
                     liveChatInitialization().then(function () {
                         LiveChat.init();
-                        console.log('livechat init loaded'); //eslint-disable-line
                     });
                 } else {
                     LiveChat.init();
-                    console.log('livechat init loaded'); //eslint-disable-line
                 }
                 // first time load.
                 var last_image = $('#content img').last();
