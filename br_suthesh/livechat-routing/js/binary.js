@@ -9766,6 +9766,8 @@ var BinaryLoader = function () {
                     return e._h ? e._h.apply(null, n) : e._q.push(n);
                 }var e = { _q: [], _h: null, _v: "2.0", on: function on() {
                         i(["on", c.call(arguments)]);
+                    }, once: function once() {
+                        i(["once", c.call(arguments)]);
                     }, off: function off() {
                         i(["off", c.call(arguments)]);
                     }, get: function get() {
@@ -9773,9 +9775,9 @@ var BinaryLoader = function () {
                     }, call: function call() {
                         i(["call", c.call(arguments)]);
                     }, init: function init() {
-                        var n = t.createElement("script");n.async = !0, n.type = "text/javascript", n.src = "https://cdn.livechatinc.com/labs/tracking.js", t.head.appendChild(n);
+                        var n = t.createElement("script");n.async = !0, n.type = "text/javascript", n.src = "https://cdn.livechatinc.com/tracking.js", t.head.appendChild(n);
                     } };!n.__lc.asyncInit && e.init(), n.LiveChatWidget = n.LiveChatWidget || e;
-            })(window, document, [].slice); // eslint-disable-line
+            })(window, document, [].slice); //eslint-disable-line
             resolve();
         });
     };
