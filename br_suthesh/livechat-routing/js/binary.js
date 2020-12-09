@@ -1329,48 +1329,50 @@ var LiveChat = function () {
     var initial_session_variables = { loginid: '', landing_company_shortcode: '', currency: '', residence: '', email: '' };
     var init = function init() {
         if (window.LiveChatWidget) {
-            window.LiveChatWidget.call('set_session_variables', initial_session_variables);
+            window.LiveChatWidget.on('ready', function () {
+                window.LiveChatWidget.call('set_session_variables', initial_session_variables);
 
-            BinarySocket.wait('get_settings').then(function (response) {
-                var get_settings = response.get_settings || {};
-                var first_name = get_settings.first_name,
-                    last_name = get_settings.last_name;
+                BinarySocket.wait('get_settings').then(function (response) {
+                    var get_settings = response.get_settings || {};
+                    var first_name = get_settings.first_name,
+                        last_name = get_settings.last_name;
 
-                var email = ClientBase.get('email');
-
-                if (email) window.LiveChatWidget.call('set_customer_email', email);
-                if (first_name && last_name) window.LiveChatWidget.call('set_customer_name', first_name + ' ' + last_name);
-            });
-
-            LC_API.on_after_load = function () {
-                if (!ClientBase.isLoggedIn()) {
-                    window.LiveChatWidget.call('set_customer_email', ' ');
-                    window.LiveChatWidget.call('set_customer_name', ' ');
-                }
-            };
-
-            // window.LC_API.on_chat_ended = () => {
-            //     if (!ClientBase.isLoggedIn()){
-            //         window.LiveChatWidget.call('set_customer_email', ' ');
-            //         window.LiveChatWidget.call('set_customer_name', ' ');
-            //     }
-            // };
-
-            window.LiveChatWidget.on('visibility_changed', function (_ref) {
-                var visibility = _ref.visibility;
-
-                // only visible to CS
-                if (visibility === 'maximized' && ClientBase.isLoggedIn()) {
-                    var loginid = ClientBase.get('loginid');
-                    var landing_company_shortcode = ClientBase.get('landing_company_shortcode');
-                    var currency = ClientBase.get('currency');
-                    var residence = ClientBase.get('residence');
                     var email = ClientBase.get('email');
 
-                    var client_session_variables = _extends({}, loginid && { loginid: loginid }, landing_company_shortcode && { landing_company_shortcode: landing_company_shortcode }, currency && { currency: currency }, residence && { residence: residence }, email && { email: email });
+                    if (email) window.LiveChatWidget.call('set_customer_email', email);
+                    if (first_name && last_name) window.LiveChatWidget.call('set_customer_name', first_name + ' ' + last_name);
+                });
 
-                    window.LiveChatWidget.call('set_session_variables', client_session_variables);
-                }
+                LC_API.on_after_load = function () {
+                    if (!ClientBase.isLoggedIn()) {
+                        window.LiveChatWidget.call('set_customer_email', ' ');
+                        window.LiveChatWidget.call('set_customer_name', ' ');
+                    }
+                };
+
+                // window.LC_API.on_chat_ended = () => {
+                //     if (!ClientBase.isLoggedIn()){
+                //         window.LiveChatWidget.call('set_customer_email', ' ');
+                //         window.LiveChatWidget.call('set_customer_name', ' ');
+                //     }
+                // };
+
+                window.LiveChatWidget.on('visibility_changed', function (_ref) {
+                    var visibility = _ref.visibility;
+
+                    // only visible to CS
+                    if (visibility === 'maximized' && ClientBase.isLoggedIn()) {
+                        var loginid = ClientBase.get('loginid');
+                        var landing_company_shortcode = ClientBase.get('landing_company_shortcode');
+                        var currency = ClientBase.get('currency');
+                        var residence = ClientBase.get('residence');
+                        var email = ClientBase.get('email');
+
+                        var client_session_variables = _extends({}, loginid && { loginid: loginid }, landing_company_shortcode && { landing_company_shortcode: landing_company_shortcode }, currency && { currency: currency }, residence && { residence: residence }, email && { email: email });
+
+                        window.LiveChatWidget.call('set_session_variables', client_session_variables);
+                    }
+                });
             });
         }
     };
@@ -9745,10 +9747,12 @@ var BinaryLoader = function () {
             active_script = null;
         }
         if (window.LiveChatWidget) {
-            if (window.LiveChatWidget.get('customer_data').status !== 'chatting') {
-                window.LiveChatWidget.call('destroy');
-                console.log('livechat destroyed'); //eslint-disable-line
-            }
+            window.LiveChatWidget.on('ready', function () {
+                if (window.LiveChatWidget.get('customer_data').status !== 'chatting') {
+                    window.LiveChatWidget.call('destroy');
+                    console.log('livechat destroyed'); //eslint-disable-line
+                }
+            });
         }
         ScrollToAnchor.cleanup();
     };
