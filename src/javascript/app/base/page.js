@@ -9,6 +9,7 @@ const BinarySocket     = require('./socket');
 const TrafficSource    = require('../common/traffic_source');
 const RealityCheck     = require('../pages/user/reality_check/reality_check');
 const Elevio           = require('../../_common/base/elevio');
+const livechatFallback = require('../../_common/base/livechat').livechatFallback;
 const Login            = require('../../_common/base/login');
 const ClientBase       = require('../../_common/base/client_base');
 const elementInnerHtml = require('../../_common/common_functions').elementInnerHtml;
@@ -72,31 +73,6 @@ const Page = (() => {
         });
     };
 
-    // Fallback LiveChat icon when Elevio is not available
-    const livechatFallbackCheck = () => {
-        let livechat_shell;
-        const elevio_account_id = '5bbc2de0b7365';
-        const livechat_id = 'gtm-deriv-livechat';
-
-        const httpGet = (theUrl) => {
-            const xmlHttp = new XMLHttpRequest();
-            xmlHttp.open('GET', theUrl, false);
-            xmlHttp.send(null);
-            return xmlHttp.status;
-        };
-
-        const httpresponse = httpGet(`https://cdn.elev.io/sdk/bootloader/v4/elevio-bootloader.js?cid=${elevio_account_id}`);
-        if (httpresponse !== 200) {
-            if (window.LiveChatWidget){
-                window.LiveChatWidget.on('ready', () => {
-                    livechat_shell = document.getElementById(livechat_id);
-                    livechat_shell.style.display = 'flex';
-                    livechat_shell.addEventListener('click', () => window.LC_API.open_chat_window());
-                });
-            }
-        }
-    };
-
     const onLoad = () => {
         if (State.get('is_loaded_by_pjax')) {
             Url.reset();
@@ -114,7 +90,7 @@ const Page = (() => {
                     Elevio.injectElevio();
                 }
             }
-            livechatFallbackCheck();
+            livechatFallback();
             Header.onLoad();
             Footer.onLoad();
             Language.setCookie();
