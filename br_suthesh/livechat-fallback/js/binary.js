@@ -939,6 +939,10 @@ module.exports = {
 
 var ClientBase = __webpack_require__(/*! ./client_base */ "./src/javascript/_common/base/client_base.js");
 var GTM = __webpack_require__(/*! ./gtm */ "./src/javascript/_common/base/gtm.js");
+
+var _require = __webpack_require__(/*! ./livechat */ "./src/javascript/_common/base/livechat.js"),
+    livechatFallback = _require.livechatFallback;
+
 var BinarySocket = __webpack_require__(/*! ./socket_base */ "./src/javascript/_common/base/socket_base.js");
 var getLanguage = __webpack_require__(/*! ../language */ "./src/javascript/_common/language.js").get;
 var localize = __webpack_require__(/*! ../localize */ "./src/javascript/_common/localize.js").localize;
@@ -946,17 +950,26 @@ var createElement = __webpack_require__(/*! ../utility */ "./src/javascript/_com
 var isLoginPages = __webpack_require__(/*! ../utility */ "./src/javascript/_common/utility.js").isLoginPages;
 
 var Elevio = function () {
-    // function httpGetAsync(theUrl, callback){
-    //     const xmlHttp = new XMLHttpRequest();
-    //     xmlHttp.onreadystatechange = function() {
-    //         callback(xmlHttp.status);
-    //     };
-    //     xmlHttp.open('GET', theUrl, true); // true for asynchronous
-    //     xmlHttp.send(null);
-    // }
-
     var el_shell_id = 'elevio-shell';
     var el_shell = void 0;
+    var account_id = '5bbc2de0b7365';
+    var elevio_script = 'https://cdn.elev.io/sdk/bootloader/v4/elevio-bootloader.js?cid=' + account_id;
+
+    var checkElevioAvailability = function checkElevioAvailability() {
+        var httpGet = function httpGet(theUrl) {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open('GET', theUrl, false);
+            xmlHttp.send(null);
+            return xmlHttp.status;
+        };
+
+        var httpresponse = httpGet(elevio_script);
+        if (httpresponse !== 200) {
+
+            // fallback to livechat when elevio is not available
+            livechatFallback();
+        }
+    };
 
     var init = function init() {
         if (isLoginPages()) return;
@@ -966,22 +979,21 @@ var Elevio = function () {
         el_shell.addEventListener('click', function () {
             return injectElevio(true);
         });
-        // httpGetAsync('https://cdn.elev.io/sdk/bootloader/v4/elevio-bootloader.js?cid=5bbc2de0b7365', (response) => {
-        //     console.log(response); //eslint-disable-line
-        // });
+
+        checkElevioAvailability(elevio_script);
     };
 
     var injectElevio = function injectElevio() {
         var is_open = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
 
-        var account_id = '5bbc2de0b7365';
+
         window._elev = {}; // eslint-disable-line no-underscore-dangle
         window._elev.account_id = account_id; // eslint-disable-line no-underscore-dangle
 
         var script = document.createElement('script');
         script.type = 'text/javascript';
         script.async = 1;
-        script.src = 'https://cdn.elev.io/sdk/bootloader/v4/elevio-bootloader.js?cid=' + account_id;
+        script.src = elevio_script;
         script.id = 'loaded-elevio-script';
         document.body.appendChild(script);
 
@@ -1337,32 +1349,11 @@ var BinarySocket = __webpack_require__(/*! ./socket_base */ "./src/javascript/_c
 var ClientBase = __webpack_require__(/*! ./client_base */ "./src/javascript/_common/base/client_base.js");
 
 var LiveChat = function () {
-    var elevio_account_id = '5bbc2de0b7365';
-    function httpGetAsync(theUrl, callback) {
-        var xmlHttp = new XMLHttpRequest();
-        xmlHttp.onreadystatechange = function () {
-            if (xmlHttp.status !== 0) {
-                callback(xmlHttp.status);
-            }
-        };
-        xmlHttp.open('GET', theUrl, true); // true for asynchronous
-        xmlHttp.send(null);
-    }
 
-    var livechat_id = 'gtm-deriv-livechat';
-    var livechat_shell = void 0;
     var initial_session_variables = { loginid: '', landing_company_shortcode: '', currency: '', residence: '', email: '' };
+
     var init = function init() {
         if (window.LiveChatWidget) {
-            httpGetAsync('https://cdn.elev.io/sdk/bootloader/v4/elevio-bootloader.js?cid=' + elevio_account_id, function (response) {
-                if (response !== 200) {
-                    livechat_shell = document.getElementById(livechat_id);
-                    livechat_shell.style.display = 'flex';
-                    livechat_shell.addEventListener('click', function () {
-                        return window.LC_API.open_chat_window();
-                    });
-                }
-            });
 
             window.LiveChatWidget.call('set_session_variables', initial_session_variables);
 
@@ -1403,8 +1394,25 @@ var LiveChat = function () {
         }
     };
 
+    // Fallback LiveChat icon
+    var livechatFallback = function livechatFallback() {
+        var livechat_shell = void 0;
+        var livechat_id = 'gtm-deriv-livechat';
+
+        if (window.LiveChatWidget) {
+            window.LiveChatWidget.on('ready', function () {
+                livechat_shell = document.getElementById(livechat_id);
+                livechat_shell.style.display = 'flex';
+                livechat_shell.addEventListener('click', function () {
+                    return window.LC_API.open_chat_window();
+                });
+            });
+        }
+    };
+
     return {
-        init: init
+        init: init,
+        livechatFallback: livechatFallback
     };
 }();
 
