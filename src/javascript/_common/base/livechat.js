@@ -50,29 +50,19 @@ const LiveChat = (() => {
         }
     };
 
-    // Fallback LiveChat icon when Elevio is not available
+    // Fallback LiveChat icon
     const livechatFallback = () => {
         let livechat_shell;
-        const elevio_account_id = '5bbc2de0b7365';
         const livechat_id = 'gtm-deriv-livechat';
-
-        const httpGet = (theUrl) => {
-            const xmlHttp = new XMLHttpRequest();
-            xmlHttp.open('GET', theUrl, false);
-            xmlHttp.send(null);
-            return xmlHttp.status;
-        };
-
-        const httpresponse = httpGet(`https://cdn.elev.io/sdk/bootloader/v4/elevio-bootloader.js?cid=${elevio_account_id}`);
-        if (httpresponse !== 200) {
-            if (window.LiveChatWidget){
-                window.LiveChatWidget.on('ready', () => {
-                    livechat_shell = document.getElementById(livechat_id);
-                    livechat_shell.style.display = 'flex';
-                    livechat_shell.addEventListener('click', () => window.LC_API.open_chat_window());
-                });
-            }
+    
+        if (window.LiveChatWidget){
+            window.LiveChatWidget.on('ready', () => {
+                livechat_shell = document.getElementById(livechat_id);
+                livechat_shell.style.display = 'flex';
+                livechat_shell.addEventListener('click', () => window.LC_API.open_chat_window());
+            });
         }
+        
     };
 
     return {

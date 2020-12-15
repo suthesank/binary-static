@@ -9,7 +9,6 @@ const BinarySocket     = require('./socket');
 const TrafficSource    = require('../common/traffic_source');
 const RealityCheck     = require('../pages/user/reality_check/reality_check');
 const Elevio           = require('../../_common/base/elevio');
-const livechatFallback = require('../../_common/base/livechat').livechatFallback;
 const Login            = require('../../_common/base/login');
 const ClientBase       = require('../../_common/base/client_base');
 const elementInnerHtml = require('../../_common/common_functions').elementInnerHtml;
@@ -90,7 +89,6 @@ const Page = (() => {
                     Elevio.injectElevio();
                 }
             }
-            livechatFallback();
             Header.onLoad();
             Footer.onLoad();
             Language.setCookie();
