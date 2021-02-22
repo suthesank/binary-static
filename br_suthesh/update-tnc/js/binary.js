@@ -9905,7 +9905,7 @@ var BinaryLoader = function () {
         BinaryPjax.init(container, '#content');
 
         BinarySocket.wait('website_status').then(function () {
-            if (State.getResponse('website_status.clients_country') === 'gb') {
+            if (State.getResponse('website_status.clients_country') === 'gb' || Client.get('landing_company_shortcode') === 'iom') {
                 getElementById('gamstop_uk_display').setVisibility(1);
             }
         });
