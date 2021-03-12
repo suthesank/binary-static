@@ -76,7 +76,17 @@ const Client = (() => {
         });
     };
 
+    const redirection = (response) => {
+        const redirect_to = getPropertyValue(response, ['echo_req', 'passthrough', 'redirect_to']);
+        if (redirect_to) {
+            window.location.href = redirect_to;
+        } else {
+            window.location.reload();
+        }
+    };
+
     const doLogout = (response) => {
+
         if (response.logout !== 1) return;
         removeCookies('login', 'loginid', 'loginid_list', 'email', 'residence', 'settings'); // backward compatibility
         removeCookies('reality_check', 'affiliate_token', 'affiliate_tracking', 'onfido_token');
@@ -89,14 +99,14 @@ const Client = (() => {
         ClientBase.set('loginid', '');
         SocketCache.clear();
         RealityCheckData.clear();
-        LiveChat.endLiveChat().then(() => {
-            const redirect_to = getPropertyValue(response, ['echo_req', 'passthrough', 'redirect_to']);
-            if (redirect_to) {
-                window.location.href = redirect_to;
-            } else {
-                window.location.reload();
-            }
-        });
+        if (window.location.hostname === ('staging.binary.com' || 'binary.com')){
+            LiveChat.endLiveChat().then(() => {
+                redirection(response);
+            });
+        } else {
+            redirection(response);
+        }
+        
     };
 
     const getUpgradeInfo = () => {
