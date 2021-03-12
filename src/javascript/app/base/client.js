@@ -4,7 +4,8 @@ const RealityCheckData   = require('../pages/user/reality_check/reality_check.da
 const ClientBase         = require('../../_common/base/client_base');
 const GTM                = require('../../_common/base/gtm');
 const SocketCache        = require('../../_common/base/socket_cache');
-const LiveChat            = require('../../_common/base/livechat');
+const LiveChat           = require('../../_common/base/livechat');
+const { isBinaryDomain } = require('../../_common/utility');
 const getElementById     = require('../../_common/common_functions').getElementById;
 const removeCookies      = require('../../_common/storage').removeCookies;
 const urlFor             = require('../../_common/url').urlFor;
@@ -99,7 +100,7 @@ const Client = (() => {
         ClientBase.set('loginid', '');
         SocketCache.clear();
         RealityCheckData.clear();
-        if (window.location.hostname === ('staging.binary.com' || 'binary.com')){
+        if (isBinaryDomain()){
             LiveChat.endLiveChat().then(() => {
                 redirection(response);
             });
