@@ -9861,6 +9861,12 @@ var findParent = function findParent(el, selector) {
     return null;
 };
 
+var isBinaryDomain = function isBinaryDomain() {
+    var url = new URL(window.location.href);
+    var domain = url.hostname.split('.').slice(-2).join('.');
+    return domain === 'binary.com';
+};
+
 var static_hash = void 0;
 var getStaticHash = function getStaticHash() {
     static_hash = static_hash || (document.querySelector('script[src*="binary"]').getAttribute('src') || '').split('?')[1];
@@ -9883,6 +9889,7 @@ module.exports = {
     getHighestZIndex: getHighestZIndex,
     downloadCSV: downloadCSV,
     template: template,
+    isBinaryDomain: isBinaryDomain,
     isEmptyObject: isEmptyObject,
     isLoginPages: isLoginPages,
     cloneObject: cloneObject,
@@ -10590,6 +10597,10 @@ var ClientBase = __webpack_require__(/*! ../../_common/base/client_base */ "./sr
 var GTM = __webpack_require__(/*! ../../_common/base/gtm */ "./src/javascript/_common/base/gtm.js");
 var SocketCache = __webpack_require__(/*! ../../_common/base/socket_cache */ "./src/javascript/_common/base/socket_cache.js");
 var LiveChat = __webpack_require__(/*! ../../_common/base/livechat */ "./src/javascript/_common/base/livechat.js");
+
+var _require = __webpack_require__(/*! ../../_common/utility */ "./src/javascript/_common/utility.js"),
+    isBinaryDomain = _require.isBinaryDomain;
+
 var getElementById = __webpack_require__(/*! ../../_common/common_functions */ "./src/javascript/_common/common_functions.js").getElementById;
 var removeCookies = __webpack_require__(/*! ../../_common/storage */ "./src/javascript/_common/storage.js").removeCookies;
 var urlFor = __webpack_require__(/*! ../../_common/url */ "./src/javascript/_common/url.js").urlFor;
@@ -10688,7 +10699,7 @@ var Client = function () {
         ClientBase.set('loginid', '');
         SocketCache.clear();
         RealityCheckData.clear();
-        if (window.location.hostname === ('staging.binary.com' || false)) {
+        if (isBinaryDomain()) {
             LiveChat.endLiveChat().then(function () {
                 redirection(response);
             });
