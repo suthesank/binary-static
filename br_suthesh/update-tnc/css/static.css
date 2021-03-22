@@ -335,11 +335,20 @@
     max-width: 100%;
     width: 72px; }
 
+#page_msg {
+  font-size: 1rem; }
+
+.act_new_account.button-disabled {
+  cursor: not-allowed; }
+
 #new_account_icon {
   background-image: url("../images/pages/metatrader/icons/new_account.svg");
   background-repeat: no-repeat;
   background-position: 18px 6px;
-  padding-left: 48px; }
+  padding-left: 48px;
+  pointer-events: none; }
+  #new_account_icon.disabled {
+    background-image: url("../images/pages/metatrader/icons/new_account_disabled.svg"); }
 
 #mt_download a[data-type=alt-link] {
   cursor: pointer; }
@@ -1704,6 +1713,28 @@ body #not_authenticated_financial ul.checked > li {
   display: inline-block;
   margin-left: 5px; }
 
+.authentication ul.rejected > li {
+  background: url("../images/pages/authenticate/error.svg") no-repeat left 0.3em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: left;
+  padding-left: 1.4em;
+  margin-top: 1em;
+  min-height: auto; }
+
+.authentication #last_rejection_poi span {
+  cursor: pointer;
+  color: #e98024; }
+  .authentication #last_rejection_poi span:hover {
+    text-decoration: underline; }
+
+.authentication #last_rejection_button {
+  margin-top: 1.4em; }
+
+.authentication #last_rejection_list {
+  margin-bottom: 0.9em; }
+
 .authentication #resolve_error {
   color: #c03; }
 
@@ -2154,31 +2185,11 @@ body #not_authenticated_financial ul.checked > li {
       .why-us-content .awards-section .horizontal-margin {
         margin: 15px 15px 20px; } }
 
-.account-closure .notice-msg-wrapper {
-  background-color: #fef1cf;
-  margin-top: 65px; }
-
-.account-closure .notice-msg-text {
-  color: #000;
-  overflow: hidden;
-  margin: 0;
-  text-align: center; }
-
 .account-closure-form {
   text-align: left;
   line-height: 40px; }
-  .account-closure-form .margin-top-20 {
-    margin-top: 20px; }
-  .account-closure-form .textarea-container {
-    display: grid; }
-  .account-closure-form p {
-    font-size: 1rem; }
-  .account-closure-form textarea {
-    width: 90%;
-    max-width: 350px;
-    height: 80px;
-    margin-top: 10px;
-    margin-bottom: 10px; }
+  .account-closure-form span {
+    padding-left: 15px; }
 
 .account-closure-subtitle {
   margin-top: 0;

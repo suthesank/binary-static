@@ -180,6 +180,21 @@ a.previous-wrapper {
     border: 1px solid #dedede;
     border-radius: 4px;
     margin-bottom: 20px; }
+    #mt_account_management .mt-panel .password--field-wrapper {
+      max-width: unset; }
+      #mt_account_management .mt-panel .password--field-wrapper input {
+        max-width: unset; }
+    #mt_account_management .mt-panel .password--message {
+      white-space: unset; }
+    @media screen and (max-width: 480px) {
+      #mt_account_management .mt-panel .password--field-wrapper {
+        max-width: unset; }
+        #mt_account_management .mt-panel .password--field-wrapper input {
+          width: 100% !important; }
+      #mt_account_management .mt-panel .password--meter {
+        top: 22px; }
+      #mt_account_management .mt-panel .password--toggle {
+        top: 5px; } }
   #mt_account_management .flex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -271,6 +286,12 @@ a.previous-wrapper {
       #mt_account_management #account_selector #accounts_list .acc-name {
         line-height: 30px;
         padding: 0 20px; }
+        #mt_account_management #account_selector #accounts_list .acc-name.disabled {
+          cursor: not-allowed;
+          color: #dedede !important;
+          background-color: transparent !important; }
+          #mt_account_management #account_selector #accounts_list .acc-name.disabled .mt-icon {
+            opacity: 0.4; }
         #mt_account_management #account_selector #accounts_list .acc-name:hover {
           color: #394171;
           background: #f2f2f2; }
@@ -344,13 +365,14 @@ a.previous-wrapper {
       #mt_account_management #account_details .acc-info .display_login_tip {
         margin-left: 4px;
         border-bottom: none; }
-    #mt_account_management #account_details .add_more_servers {
+    #mt_account_management #account_details .add_region {
       position: absolute;
-      bottom: 8px;
-      right: 8px; }
-      #mt_account_management #account_details .add_more_servers span {
-        padding: 6px 8px;
-        font-size: 14px; }
+      bottom: 20px;
+      right: 20px; }
+      #mt_account_management #account_details .add_region #btn_add_region {
+        margin-right: 16px; }
+      #mt_account_management #account_details .add_region span {
+        font-size: 18px; }
   #mt_account_management .acc-actions {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -446,6 +468,12 @@ a.previous-wrapper {
           height: 88px;
           position: absolute;
           background: rgba(0, 0, 0, 0.05); }
+      #mt_account_management .fst-container #fst_action .type-group .mt5_type_box.disabled {
+        cursor: not-allowed; }
+        #mt_account_management .fst-container #fst_action .type-group .mt5_type_box.disabled:before {
+          background: url("../images/pages/metatrader/dashboard/tick_disabled.svg"); }
+        #mt_account_management .fst-container #fst_action .type-group .mt5_type_box.disabled:after {
+          background: transparent; }
       #mt_account_management .fst-container #fst_action .type-group .mt5_type_box.existed:before {
         background: url("../images/pages/metatrader/dashboard/tick_gray.svg");
         border: none; }
@@ -458,6 +486,18 @@ a.previous-wrapper {
     #mt_account_management .fst-container #fst_action .type-group p {
       max-width: 140px;
       margin: 0 auto; }
+    #mt_account_management .fst-container #fst_action .type-group #template_gaming_financial {
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1; }
+    #mt_account_management .fst-container #fst_action .type-group #template_financial_financial {
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2; }
+    #mt_account_management .fst-container #fst_action .type-group #template_financial_financial_stp {
+      -webkit-box-ordinal-group: 4;
+          -ms-flex-order: 3;
+              order: 3; }
     #mt_account_management .fst-container #fst_action #new_account_msg ul.bullet {
       margin-top: 0;
       margin-bottom: 0; }
@@ -467,6 +507,10 @@ a.previous-wrapper {
       border: 1px solid #dedede; }
     #mt_account_management .fst-container #fst_action #frm_new_account input[type='radio'][disabled] + label span {
       color: #dedede; }
+    #mt_account_management .fst-container #fst_action #frm_new_account #server_unavailable_notice {
+      margin: 0 14px;
+      font-size: 1rem;
+      line-height: 24px; }
   #mt_account_management .txt-left {
     text-align: left; }
   #mt_account_management .separator {
@@ -492,7 +536,22 @@ a.previous-wrapper {
   #mt_account_management .mobile-balance {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; } }
+    display: flex; }
+  #mt_account_management #account_details .add_region {
+    position: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 100%;
+    padding: 0 10px; }
+    #mt_account_management #account_details .add_region a {
+      margin-bottom: 0 !important; }
+    #mt_account_management #account_details .add_region span {
+      padding: 9px;
+      font-size: 14px; } }
 
 .mt-sidebar-button {
   display: -webkit-box;
@@ -2010,6 +2069,37 @@ tbody#instruments > tr > td {
 
 #profit-table-container .new-width {
   min-width: 100px; }
+
+#statement-container #statement-tool {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  @media (max-width: 804px) {
+    #statement-container #statement-tool {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column;
+              flex-flow: column; } }
+  #statement-container #statement-tool .date-picker-statement {
+    display: inline-block; }
+  #statement-container #statement-tool #filter-container {
+    display: inline-block;
+    width: 15rem;
+    margin-left: 10px; }
+    @media (max-width: 480px) {
+      #statement-container #statement-tool #filter-container {
+        width: 75%; } }
+    @media (max-width: 804px) {
+      #statement-container #statement-tool #filter-container {
+        margin-top: 10px;
+        margin-left: 0; } }
 
 #statement-container #download_csv {
   line-height: 28px; }
