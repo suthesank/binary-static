@@ -9911,7 +9911,7 @@ var BinaryLoader = function () {
         BinaryPjax.init(container, '#content');
 
         BinarySocket.wait('website_status').then(function () {
-            var is_uk_residence = (Client.get('residence') || State.getResponse('website_status.clients_country')) === 'gb';
+            var is_uk_residence = Client.get('residence') === 'gb' || State.getResponse('website_status.clients_country') === 'gb';
             if (is_uk_residence || Client.get('landing_company_shortcode') === 'iom') {
                 getElementById('gamstop_uk_display').setVisibility(1);
             }
