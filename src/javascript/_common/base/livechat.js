@@ -1,14 +1,19 @@
-const { init }     = require('@livechat/customer-sdk');
-const BinarySocket = require('./socket_base');
-const ClientBase = require('./client_base');
+const { init }      = require('@livechat/customer-sdk');
+const BinarySocket  = require('./socket_base');
+const ClientBase    = require('./client_base');
+const TrafficSource = require('../../app/common/traffic_source');
 
 const LiveChat = (() => {
     const licenseID = 12049137;
     const clientID = '66aa088aad5a414484c1fd1fa8a5ace7';
-    let session_variables = { loginid: '', landing_company_shortcode: '', currency: '', residence: '', email: '' };
+    let session_variables = { is_logged_in: false, loginid: '', landing_company_shortcode: '', currency: '', residence: '', email: '', utm_source: '', utm_medium: '', utm_campaign: '' };
     let client_email, first_name, last_name;
     
     const setSessionVariables = () => {
+        const utm_data = TrafficSource.getData();
+        const utm_source = TrafficSource.getSource(utm_data);
+        const utm_campaign = utm_data.utm_campaign;
+        const utm_medium = utm_data.utm_medium;
         const loginid = ClientBase.get('loginid');
         const landing_company_shortcode = ClientBase.get('landing_company_shortcode');
         const currency = ClientBase.get('currency');
@@ -16,11 +21,15 @@ const LiveChat = (() => {
         const email = ClientBase.get('email');
 
         session_variables = {
+            ...true,
             ...loginid && { loginid },
             ...landing_company_shortcode && { landing_company_shortcode },
             ...currency && { currency },
             ...residence && { residence },
             ...email && { email },
+            ...utm_source && { utm_source },
+            ...utm_campaign && { utm_campaign },
+            ...utm_medium && { utm_medium },
         };
 
         window.LiveChatWidget.call('set_session_variables', session_variables);
