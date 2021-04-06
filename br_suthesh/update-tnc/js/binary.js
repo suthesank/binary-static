@@ -9909,14 +9909,6 @@ var BinaryLoader = function () {
         window.addEventListener('beforeunload', beforeContentChange);
         container.addEventListener('binarypjax:after', afterContentChange);
         BinaryPjax.init(container, '#content');
-
-        BinarySocket.wait('website_status').then(function () {
-            var is_uk_residence = Client.get('residence') === 'gb' || State.getResponse('website_status.clients_country') === 'gb';
-            if (is_uk_residence || Client.get('landing_company_shortcode') === 'iom') {
-                getElementById('gamstop_uk_display').setVisibility(1);
-            }
-        });
-
         ThirdPartyLinks.init();
     };
 
@@ -9968,6 +9960,13 @@ var BinaryLoader = function () {
         if (active_script) {
             BinarySocket.setOnReconnect(active_script.onReconnect);
         }
+
+        BinarySocket.wait('website_status').then(function () {
+            var is_uk_residence = Client.get('residence') === 'gb' || State.getResponse('website_status.clients_country') === 'gb';
+            if (is_uk_residence || Client.get('landing_company_shortcode') === 'iom') {
+                getElementById('gamstop_uk_display').setVisibility(1);
+            }
+        });
     };
 
     var error_messages = {
