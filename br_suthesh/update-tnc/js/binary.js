@@ -9871,7 +9871,6 @@ var DerivBanner = __webpack_require__(/*! ../common/deriv_banner */ "./src/javas
 var GTM = __webpack_require__(/*! ../../_common/base/gtm */ "./src/javascript/_common/base/gtm.js");
 var Login = __webpack_require__(/*! ../../_common/base/login */ "./src/javascript/_common/base/login.js");
 var LiveChat = __webpack_require__(/*! ../../_common/base/livechat */ "./src/javascript/_common/base/livechat.js");
-var State = __webpack_require__(/*! ../../_common/storage */ "./src/javascript/_common/storage.js").State;
 var getElementById = __webpack_require__(/*! ../../_common/common_functions */ "./src/javascript/_common/common_functions.js").getElementById;
 var urlLang = __webpack_require__(/*! ../../_common/language */ "./src/javascript/_common/language.js").urlLang;
 var localizeForLang = __webpack_require__(/*! ../../_common/localize */ "./src/javascript/_common/localize.js").forLang;
@@ -9960,13 +9959,6 @@ var BinaryLoader = function () {
         if (active_script) {
             BinarySocket.setOnReconnect(active_script.onReconnect);
         }
-
-        BinarySocket.wait('website_status').then(function () {
-            var is_uk_residence = Client.get('residence') === 'gb' || State.getResponse('website_status.clients_country') === 'gb';
-            if (is_uk_residence || Client.get('landing_company_shortcode') === 'iom') {
-                getElementById('gamstop_uk_display').setVisibility(1);
-            }
-        });
     };
 
     var error_messages = {
@@ -11919,6 +11911,13 @@ var Page = function () {
             }
         }
         TrafficSource.setData();
+
+        BinarySocket.wait('authorize', 'website_status', 'landing_company').then(function () {
+            var is_uk_residence = Client.get('residence') === 'gb';
+            if (is_uk_residence || Client.get('landing_company_shortcode') === 'iom') {
+                getElementById('gamstop_uk_display').setVisibility(1);
+            }
+        });
     };
 
     var recordAffiliateExposure = function recordAffiliateExposure() {
