@@ -8,7 +8,7 @@ const LiveChat = (() => {
     const utm_source = TrafficSource.getSource(utm_data) || '';
     const utm_campaign = utm_data.utm_campaign || '';
     const utm_medium = utm_data.utm_medium || '';
-    let session_variables = { is_logged_in: false, loginid: '', landing_company_shortcode: '', currency: '', residence: '', email: '', utm_source: utm_source || '', utm_medium: utm_medium || '', utm_campaign: utm_campaign || '' };
+    let session_variables = { is_logged_in: false, loginid: '', landing_company_shortcode: '', currency: '', residence: '', email: '', utm_source , utm_medium, utm_campaign };
     let client_email, first_name, last_name;
     
     const setSessionVariables = () => {
