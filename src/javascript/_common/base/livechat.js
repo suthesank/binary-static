@@ -30,7 +30,6 @@ const LiveChat = (() => {
             ...utm_campaign && { utm_campaign },
             ...utm_medium && { utm_medium },
         };
-        console.log(session_variables) //eslint-disable-line
         window.LiveChatWidget.call('set_session_variables', session_variables);
     };
 
