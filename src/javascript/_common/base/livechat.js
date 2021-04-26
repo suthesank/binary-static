@@ -20,7 +20,7 @@ const LiveChat = (() => {
         const email = ClientBase.get('email');
 
         const session_variables = {
-            ...is_logged_in && { is_logged_in } || { is_logged_in: false },
+            is_logged_in,
             ...loginid && { loginid },
             ...landing_company_shortcode && { landing_company_shortcode },
             ...currency && { currency },
