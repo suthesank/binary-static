@@ -21,17 +21,17 @@ const Box = ({
     header,
     children,
 }) => (
-        <React.Fragment>
-            {first ? <TimelineFirst /> : undefined}
-            <div className='background-gray fill-bg-color center-text gr-padding-30 gr-12'>
-                <div className='gr-12 gr-padding-30'>
-                    <h1>{header}</h1>
-                    {children}
-                </div>
+    <React.Fragment>
+        {first ? <TimelineFirst /> : undefined}
+        <div className='background-gray fill-bg-color center-text gr-padding-30 gr-12'>
+            <div className='gr-12 gr-padding-30'>
+                <h1>{header}</h1>
+                {children}
             </div>
-            {last ? undefined : <TimelineMid />}
-        </React.Fragment>
-    );
+        </div>
+        {last ? undefined : <TimelineMid />}
+    </React.Fragment>
+);
 
 const RegulatorImage = ({
     padding,
@@ -39,12 +39,12 @@ const RegulatorImage = ({
     href,
     image,
 }) => (
-        <div className={`gr-${padding || 3} gr-${padding_m || 4}-m gr-centered`}>
-            <a href={href} target='_blank' rel='noopener noreferrer'>
-                <img className='responsive' src={it.url_for(image)} />
-            </a>
-        </div>
-    );
+    <div className={`gr-${padding || 3} gr-${padding_m || 4}-m gr-centered`}>
+        <a href={href} target='_blank' rel='noopener noreferrer'>
+            <img className='responsive' src={it.url_for(image)} />
+        </a>
+    </div>
+);
 
 const RegulatorText = () => (
     <p>
