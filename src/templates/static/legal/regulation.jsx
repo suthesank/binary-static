@@ -1,5 +1,5 @@
-import React             from 'react';
-import { FillBox }       from '../../_common/components/elements.jsx';
+import React from 'react';
+import { FillBox } from '../../_common/components/elements.jsx';
 import { SeparatorLine } from '../../_common/components/separator_line.jsx';
 
 const TimelineFirst = () => (
@@ -21,17 +21,17 @@ const Box = ({
     header,
     children,
 }) => (
-    <React.Fragment>
-        {first ? <TimelineFirst /> : undefined}
-        <div className='background-gray fill-bg-color center-text gr-padding-30 gr-12'>
-            <div className='gr-12 gr-padding-30'>
-                <h1>{header}</h1>
-                {children}
+        <React.Fragment>
+            {first ? <TimelineFirst /> : undefined}
+            <div className='background-gray fill-bg-color center-text gr-padding-30 gr-12'>
+                <div className='gr-12 gr-padding-30'>
+                    <h1>{header}</h1>
+                    {children}
+                </div>
             </div>
-        </div>
-        {last ? undefined : <TimelineMid />}
-    </React.Fragment>
-);
+            {last ? undefined : <TimelineMid />}
+        </React.Fragment>
+    );
 
 const RegulatorImage = ({
     padding,
@@ -39,12 +39,12 @@ const RegulatorImage = ({
     href,
     image,
 }) => (
-    <div className={`gr-${padding || 3} gr-${padding_m || 4}-m gr-centered`}>
-        <a href={href} target='_blank' rel='noopener noreferrer'>
-            <img className='responsive' src={it.url_for(image)} />
-        </a>
-    </div>
-);
+        <div className={`gr-${padding || 3} gr-${padding_m || 4}-m gr-centered`}>
+            <a href={href} target='_blank' rel='noopener noreferrer'>
+                <img className='responsive' src={it.url_for(image)} />
+            </a>
+        </div>
+    );
 
 const RegulatorText = () => (
     <p>
@@ -60,7 +60,7 @@ const Area = ({ items }) => {
     const normalize = n => n.toFixed(2);
     return (
         <React.Fragment>
-            {items.map((item, idx) =>(
+            {items.map((item, idx) => (
                 <area
                     shape='rect'
                     coords={`${normalize(item.x * svg_scale)},${normalize(item.y * svg_scale)},${normalize((item.x + (item.width || default_width) + square_wh) * svg_scale)},${normalize((item.y + square_wh) * svg_scale)}`}
@@ -76,7 +76,7 @@ const Area = ({ items }) => {
 };
 
 const Regulation = () => {
-    const has_KID  = /en|es|it|pl|pt/.test(`${it.language.toLowerCase()}`);
+    const has_KID = /en|es|it|pl|pt/.test(`${it.language.toLowerCase()}`);
     const lang_KID = has_KID ? `${it.language.toLowerCase()}` : 'en';
 
     return (
@@ -107,47 +107,47 @@ const Regulation = () => {
                         <map name='planetmap' id='planetmap'>
                             <Area
                                 items={[
-                                    { name: 'Sweden',         x: 105.561, y: 13.568 },
-                                    { name: 'Denmark',        x: 102.461, y: 25.638 },
-                                    { name: 'Germany',        x: 94.944,  y: 37.872 },
-                                    { name: 'Netherlands',    x: 79.061,  y: 50.038,  width: 46.2 },
-                                    { name: 'United Kingdom', x: 0.461,   y: 102.368, width: 55.7 },
-                                    { name: 'Luxembourg',     x: 0,       y: 114.931, width: 46.9 },
-                                    { name: 'France',         x: 0.434,   y: 136.647 },
-                                    { name: 'Spain',          x: 0.25,    y: 152.315 },
-                                    { name: 'Italy',          x: 0.184,   y: 164.056, width: 27.3 },
-                                    { name: 'Portugal',       x: 0.25,    y: 178.256 },
-                                    { name: 'Austria',        x: 108.926, y: 179.94 },
-                                    { name: 'Slovenia',       x: 100.733, y: 205.64 },
-                                    { name: 'Croatia',        x: 167.224, y: 212.34 },
-                                    { name: 'Greece',         x: 187.154, y: 193.083 },
-                                    { name: 'Cyprus',         x: 245,     y: 219,     width: (48.4 - 10.6) },
-                                    { name: 'Bulgaria',       x: 253,     y: 145.5,   width: (48.4 - 10.6) },
-                                    { name: 'Romania',        x: 251.6,   y: 133.59 },
-                                    { name: 'Hungary',        x: 254.2,   y: 122 },
-                                    { name: 'Slovakia',       x: 251.6,   y: 110.279 },
-                                    { name: 'Czech Republic', x: 236.2,   y: 97.306,  width: 53.2 },
-                                    { name: 'Poland',         x: 255.3,   y: 83.549,  width: 34.2 },
-                                    { name: 'Lithuania',      x: 250.348, y: 68.383,  width: 39.3 },
-                                    { name: 'Latvia',         x: 255.321, y: 53.293,  width: 34.2 },
-                                    { name: 'Estonia',        x: 255.3,   y: 38.361,  width: 34.2 },
-                                    { name: 'Finland',        x: 247.873, y: 13.568,  width: 34.2 },
+                                    { name: 'Sweden', x: 105.561, y: 13.568 },
+                                    { name: 'Denmark', x: 102.461, y: 25.638 },
+                                    { name: 'Germany', x: 94.944, y: 37.872 },
+                                    { name: 'Netherlands', x: 79.061, y: 50.038, width: 46.2 },
+                                    { name: 'United Kingdom', x: 0.461, y: 102.368, width: 55.7 },
+                                    { name: 'Luxembourg', x: 0, y: 114.931, width: 46.9 },
+                                    { name: 'France', x: 0.434, y: 136.647 },
+                                    { name: 'Spain', x: 0.25, y: 152.315 },
+                                    { name: 'Italy', x: 0.184, y: 164.056, width: 27.3 },
+                                    { name: 'Portugal', x: 0.25, y: 178.256 },
+                                    { name: 'Austria', x: 108.926, y: 179.94 },
+                                    { name: 'Slovenia', x: 100.733, y: 205.64 },
+                                    { name: 'Croatia', x: 167.224, y: 212.34 },
+                                    { name: 'Greece', x: 187.154, y: 193.083 },
+                                    { name: 'Cyprus', x: 245, y: 219, width: (48.4 - 10.6) },
+                                    { name: 'Bulgaria', x: 253, y: 145.5, width: (48.4 - 10.6) },
+                                    { name: 'Romania', x: 251.6, y: 133.59 },
+                                    { name: 'Hungary', x: 254.2, y: 122 },
+                                    { name: 'Slovakia', x: 251.6, y: 110.279 },
+                                    { name: 'Czech Republic', x: 236.2, y: 97.306, width: 53.2 },
+                                    { name: 'Poland', x: 255.3, y: 83.549, width: 34.2 },
+                                    { name: 'Lithuania', x: 250.348, y: 68.383, width: 39.3 },
+                                    { name: 'Latvia', x: 255.321, y: 53.293, width: 34.2 },
+                                    { name: 'Estonia', x: 255.3, y: 38.361, width: 34.2 },
+                                    { name: 'Finland', x: 247.873, y: 13.568, width: 34.2 },
                                 ]}
                             />
                         </map>
                     </div>
 
-                    <h3>{it.L('Pillar 3 Disclosures')}</h3>
+                    <h3>{it.L('Financial disclosure report')}</h3>
                     <div>
-                        <p>{it.L('The Pillar 3 disclosure report of Deriv Investments (Europe) Limited has been prepared in accordance with the Capital Requirements Directive IV and the Capital Requirements Regulation. Read our Pillar 3 disclosure report to understand how we comply with market discipline as a market participant.')}</p>
+                        <p>{it.L('Deriv Investments (Europe) Limited has prepared the Financial disclosures report in accordance with the Investment Firms Regulation and Directive. Read our report to understand how we comply with market discipline as a market participant.')}</p>
                         <FillBox
                             padding='5'
                             center
                             border='border-dark-gray'
                             image='images/pages/regulation/pdf-icon.svg'
-                            href={it.url_for('/download/DIEL_Pillar_3_2020.pdf')}
+                            href={it.url_for('/download/Financial-Disclosures-Report.pdf')}
                             target='_blank'
-                            text={it.L('Pillar 3 disclosure report')}
+                            text={it.L('Financial disclosure report')}
                         />
                     </div>
 
@@ -157,9 +157,9 @@ const Regulation = () => {
                         <div className='gr-row'>
                             <FillBox id='crypto_fillbox' padding='4' center border='border-dark-gray' href={it.url_for(`/download/key_information_document/${lang_KID}/Crypto.pdf`)} target='_blank' text={it.L('Cryptocurrencies')} />
                             <FillBox id='cfd_fillbox' padding='4' center className='margin-right-0' border='border-dark-gray' href={it.url_for(`/download/key_information_document/${lang_KID}/Commodities.pdf`)} target='_blank' text={it.L('Commodities')} />
-                            <FillBox id='fx_fillbox' padding='4' center className='margin-left-0'  border='border-dark-gray' href={it.url_for(`/download/key_information_document/${lang_KID}/Forex.pdf`)} target='_blank' text={it.L('Forex')} />
-                            <FillBox id='fx_fillbox' padding='4' center className='margin-right-0'  border='border-dark-gray' href={it.url_for(`/download/key_information_document/${lang_KID}/Stocks.pdf`)} target='_blank' text={it.L('Stocks')} />
-                            <FillBox id='fx_fillbox' padding='4' center className='margin-left-0'  border='border-dark-gray' href={it.url_for(`/download/key_information_document/${lang_KID}/Stock-Indices.pdf`)} target='_blank' text={it.L('Stock Indices')} />
+                            <FillBox id='fx_fillbox' padding='4' center className='margin-left-0' border='border-dark-gray' href={it.url_for(`/download/key_information_document/${lang_KID}/Forex.pdf`)} target='_blank' text={it.L('Forex')} />
+                            <FillBox id='fx_fillbox' padding='4' center className='margin-right-0' border='border-dark-gray' href={it.url_for(`/download/key_information_document/${lang_KID}/Stocks.pdf`)} target='_blank' text={it.L('Stocks')} />
+                            <FillBox id='fx_fillbox' padding='4' center className='margin-left-0' border='border-dark-gray' href={it.url_for(`/download/key_information_document/${lang_KID}/Stock-Indices.pdf`)} target='_blank' text={it.L('Stock Indices')} />
                         </div>
                     </div>
 
