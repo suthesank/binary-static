@@ -1,5 +1,5 @@
-import React from 'react';
-import { FillBox } from '../../_common/components/elements.jsx';
+import React             from 'react';
+import { FillBox }       from '../../_common/components/elements.jsx';
 import { SeparatorLine } from '../../_common/components/separator_line.jsx';
 
 const TimelineFirst = () => (
@@ -76,7 +76,7 @@ const Area = ({ items }) => {
 };
 
 const Regulation = () => {
-    const has_KID = /en|es|it|pl|pt/.test(`${it.language.toLowerCase()}`);
+    const has_KID  = /en|es|it|pl|pt/.test(`${it.language.toLowerCase()}`);
     const lang_KID = has_KID ? `${it.language.toLowerCase()}` : 'en';
 
     return (
@@ -107,31 +107,31 @@ const Regulation = () => {
                         <map name='planetmap' id='planetmap'>
                             <Area
                                 items={[
-                                    { name: 'Sweden', x: 105.561, y: 13.568 },
-                                    { name: 'Denmark', x: 102.461, y: 25.638 },
-                                    { name: 'Germany', x: 94.944, y: 37.872 },
-                                    { name: 'Netherlands', x: 79.061, y: 50.038, width: 46.2 },
-                                    { name: 'United Kingdom', x: 0.461, y: 102.368, width: 55.7 },
-                                    { name: 'Luxembourg', x: 0, y: 114.931, width: 46.9 },
-                                    { name: 'France', x: 0.434, y: 136.647 },
-                                    { name: 'Spain', x: 0.25, y: 152.315 },
-                                    { name: 'Italy', x: 0.184, y: 164.056, width: 27.3 },
-                                    { name: 'Portugal', x: 0.25, y: 178.256 },
-                                    { name: 'Austria', x: 108.926, y: 179.94 },
-                                    { name: 'Slovenia', x: 100.733, y: 205.64 },
-                                    { name: 'Croatia', x: 167.224, y: 212.34 },
-                                    { name: 'Greece', x: 187.154, y: 193.083 },
-                                    { name: 'Cyprus', x: 245, y: 219, width: (48.4 - 10.6) },
-                                    { name: 'Bulgaria', x: 253, y: 145.5, width: (48.4 - 10.6) },
-                                    { name: 'Romania', x: 251.6, y: 133.59 },
-                                    { name: 'Hungary', x: 254.2, y: 122 },
-                                    { name: 'Slovakia', x: 251.6, y: 110.279 },
-                                    { name: 'Czech Republic', x: 236.2, y: 97.306, width: 53.2 },
-                                    { name: 'Poland', x: 255.3, y: 83.549, width: 34.2 },
-                                    { name: 'Lithuania', x: 250.348, y: 68.383, width: 39.3 },
-                                    { name: 'Latvia', x: 255.321, y: 53.293, width: 34.2 },
-                                    { name: 'Estonia', x: 255.3, y: 38.361, width: 34.2 },
-                                    { name: 'Finland', x: 247.873, y: 13.568, width: 34.2 },
+                                    { name: 'Sweden',         x: 105.561, y: 13.568 },
+                                    { name: 'Denmark',        x: 102.461, y: 25.638 },
+                                    { name: 'Germany',        x: 94.944,  y: 37.872 },
+                                    { name: 'Netherlands',    x: 79.061,  y: 50.038,  width: 46.2 },
+                                    { name: 'United Kingdom', x: 0.461,   y: 102.368, width: 55.7 },
+                                    { name: 'Luxembourg',     x: 0,       y: 114.931, width: 46.9 },
+                                    { name: 'France',         x: 0.434,   y: 136.647 },
+                                    { name: 'Spain',          x: 0.25,    y: 152.315 },
+                                    { name: 'Italy',          x: 0.184,   y: 164.056, width: 27.3 },
+                                    { name: 'Portugal',       x: 0.25,    y: 178.256 },
+                                    { name: 'Austria',        x: 108.926, y: 179.94 },
+                                    { name: 'Slovenia',       x: 100.733, y: 205.64 },
+                                    { name: 'Croatia',        x: 167.224, y: 212.34 },
+                                    { name: 'Greece',         x: 187.154, y: 193.083 },
+                                    { name: 'Cyprus',         x: 245,     y: 219,     width: (48.4 - 10.6) },
+                                    { name: 'Bulgaria',       x: 253,     y: 145.5,   width: (48.4 - 10.6) },
+                                    { name: 'Romania',        x: 251.6,   y: 133.59 },
+                                    { name: 'Hungary',        x: 254.2,   y: 122 },
+                                    { name: 'Slovakia',       x: 251.6,   y: 110.279 },
+                                    { name: 'Czech Republic', x: 236.2,   y: 97.306,  width: 53.2 },
+                                    { name: 'Poland',         x: 255.3,   y: 83.549,  width: 34.2 },
+                                    { name: 'Lithuania',      x: 250.348, y: 68.383,  width: 39.3 },
+                                    { name: 'Latvia',         x: 255.321, y: 53.293,  width: 34.2 },
+                                    { name: 'Estonia',        x: 255.3,   y: 38.361,  width: 34.2 },
+                                    { name: 'Finland',        x: 247.873, y: 13.568,  width: 34.2 },
                                 ]}
                             />
                         </map>
