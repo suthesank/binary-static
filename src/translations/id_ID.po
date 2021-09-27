@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-08-18 06:22\n"
+"PO-Revision-Date: 2021-09-22 11:54\n"
 "Last-Translator: \n"
 "Language-Team: Indonesian\n"
 "MIME-Version: 1.0\n"
@@ -21,9 +21,6 @@ msgstr "1"
 
 msgid "2"
 msgstr "2"
-
-msgid "5"
-msgstr "5"
 
 msgid "20"
 msgstr "20"
@@ -508,9 +505,6 @@ msgstr "'Perusahaan Fixed-Odds Terbaik 2012' penghargaan dari Global Banking and
 msgid "'Financial Trading Operator of the Year' award by eGaming Review"
 msgstr "Penghargaan 'Financial Trading Operator of the Year' oleh eGaming Review"
 
-msgid "(1 standard forex lot is 100k units)"
-msgstr "(1 lot forex standar adalah 100k unit)"
-
 msgid "(1 standard lot is 100k units)"
 msgstr "(1 lot standar adalah 100k unit)"
 
@@ -580,6 +574,9 @@ msgstr "0.4%"
 msgid "0.5%"
 msgstr "0,5%"
 
+msgid "0.50"
+msgstr "0,50"
+
 msgid "0.75"
 msgstr "0,75"
 
@@ -601,6 +598,9 @@ msgstr "1. Bukti identitas"
 msgid "1. This link was sent by you"
 msgstr "1. Anda yang mengirim tautan"
 
+msgid "1.25"
+msgstr "1,25"
+
 msgid "1.5%"
 msgstr "1.5%"
 
@@ -612,9 +612,6 @@ msgstr "11-39 transaksi pada 12 bulan terakhir"
 
 msgid "150+"
 msgstr "150+"
-
-msgid "15O"
-msgstr "15O"
 
 msgid "16th MENA Financial Forum & Expo"
 msgstr "Finansial Forum & Expo MENA ke 16"
@@ -636,6 +633,9 @@ msgstr "2. Jendela desktop Anda tetap terbuka"
 
 msgid "2.5"
 msgstr "2,5"
+
+msgid "2.50"
+msgstr "2,50"
 
 msgid "20 – 39.999%"
 msgstr "20 – 39,999%"
@@ -837,6 +837,9 @@ msgstr "Panel yang menampilkan para pemimpin industri memberi penghargaan pada B
 
 msgid "A politically exposed person (PEP) is an individual who is or has been entrusted with a prominent public function. Family members and close associates of such individuals are also considered as PEPs. A PEP who has ceased to be entrusted with a prominent public function for at least 12 months no longer qualifies as a PEP."
 msgstr "Pihak yang terlibat dalam dunia politik (PEP) adalah individu yang dipercayai oleh rakyat. Anggota keluarga dan krabat terdekat PEP juga dikategorikan sebagai PEP. Seorang PEP yang sudah berhenti dari jabatannya lebih dari 12 bulan tidak lagi memenuhi syarat sebagai PEP."
+
+msgid "A politically exposed person (PEP) is someone appointed with a prominent public position. Close associates and family members of a PEP are also considered to be PEPs."
+msgstr "Politically exposed person (PEP) adalah istilah yang merujuk pada individu yang dipercaya memegang jabatan publik. Rekan dekat dan anggota keluarga PEP juga dapat dikategorikan sebagai PEP."
 
 msgid "A proactive approach in problem-solving"
 msgstr "Pendekatan proaktif dalam problem-solving"
@@ -1590,6 +1593,9 @@ msgstr "Mengerjakan tugas terkecil sekalipun dengan pikiran terbuka dan mempelaj
 
 msgid "Appropriateness"
 msgstr "Kelayakan"
+
+msgid "Appropriateness Test: WARNING:"
+msgstr "Uji Kelayakan: PERINGATAN:"
 
 msgid "Appropriateness test"
 msgstr "Tes kelayakan"
@@ -2561,10 +2567,10 @@ msgid "Change API Endpoint"
 msgstr "Rubah Endpoint API"
 
 msgid "Change MT5 Password"
-msgstr ""
+msgstr "Rubah Kata Sandi MT5"
 
 msgid "Change MT5 password"
-msgstr ""
+msgstr "Rubah kata sandi MT5"
 
 msgid "Change Password"
 msgstr "Perubahan Kata Sandi"
@@ -2582,7 +2588,7 @@ msgid "Change the Margin rate in relation to both Open Positions and new Orders"
 msgstr "Mengubah tingkat Margin terkait dengan Open Posisi dan Order baru"
 
 msgid "Change your Binary password and MT5 password."
-msgstr ""
+msgstr "Rubah kata sandi Binary dan MT5 Anda."
 
 msgid "Changes to this privacy policy"
 msgstr "Perubahan kebijakan privasi ini"
@@ -2947,6 +2953,9 @@ msgstr "Tarif komisi"
 msgid "Commission shall only be paid where the following are met cumulatively:"
 msgstr "Komisi hanya akan dibayarkan apabila hal-hal berikut dipenuhi secara kumulatif:"
 
+msgid "Commission structure"
+msgstr "Struktur komisi"
+
 msgid "Commission will not be paid for Accounts that have been opened or traded by an Associate of the Introducing Broker."
 msgstr "Komisi tidak akan dibayar untuk Akun yang telah didaftarkan atau diperdagangkan oleh Asosiasi Introducing Broker."
 
@@ -3095,10 +3104,10 @@ msgid "Confirm password"
 msgstr "Konfirmasi kata sandi"
 
 msgid "Confirm to change your MT5 password"
-msgstr ""
+msgstr "Konfirmasi untuk mengubah kata sandi MT5 Anda"
 
 msgid "Confirm to create your MT5 password"
-msgstr ""
+msgstr "Konfirmasi untuk membuat kata sandi MT5 Anda"
 
 msgid "Conflicts Policy"
 msgstr "Kebijakan Konflik"
@@ -3368,22 +3377,22 @@ msgid "Create Account"
 msgstr "Daftar Akun"
 
 msgid "Create MT5 password"
-msgstr ""
+msgstr "Buat kata sandi MT5"
 
 msgid "Create New Demo Account"
 msgstr "Daftar Akun Demo Baru"
 
 msgid "Create a MT5 password. You can use this password for all your MT5 accounts."
-msgstr ""
+msgstr "Buat kata sandi MT5. Anda dapat menggunakan kata sandi ini untuk semua akun MT5 Anda."
 
 msgid "Create a MetaTrader 5 account"
-msgstr ""
+msgstr "Daftar akun MetaTrader 5"
 
 msgid "Create a new Binary password."
-msgstr ""
+msgstr "Buat kata sandi Binary baru."
 
 msgid "Create a new MT5 password."
-msgstr ""
+msgstr "Buat kata sandi MT5 baru."
 
 msgid "Create account"
 msgstr "Daftar akun"
@@ -3759,6 +3768,9 @@ msgstr "Deposit serendah USD 5 untuk memulai trading."
 
 msgid "Deposit into or withdraw from your real account"
 msgstr "Deposit ke atau tarik dana dari akun riil Anda"
+
+msgid "Deposit now"
+msgstr "Deposit sekarang"
 
 msgid "Deposit or withdraw below"
 msgstr "Deposit atau withdraw di bawah ini"
@@ -4151,7 +4163,7 @@ msgid "Driver's license"
 msgstr "SIM"
 
 msgid "Driving licence"
-msgstr "Surat izin mengemudi"
+msgstr "SIM"
 
 msgid "Dubai"
 msgstr "Dubai"
@@ -4303,8 +4315,8 @@ msgstr "Dapatkan bayaran dari masalah yang Anda temukan, dengan ganjaran hingga 
 msgid "Earn additional income with us as you grow your community of potential and existing online traders through useful trading insights and mentorship."
 msgstr "Dapatkan penghasilan tambahan dengan mengembangkan potensi komunitas dan online trader melalui bimbingan dan mentor trading."
 
-msgid "Earn daily commissions on the trading activities of the clients you refer to the %1 MetaTrader 5 (MT5) platform. Your total commissions will be credited into your account by the end of the day."
-msgstr "Dapatkan komisi harian berdasarkan aktivitas trading klien yang Anda rujuk pada platform MetaTrader 5 (MT5) %1. Total komisi Anda akan dikreditkan ke dalam akun Anda pada penutupan trading setiap hari."
+msgid "Earn daily commission on your referred clients' trades on the %1 MetaTrader 5 (MT5) platform. Your total commission will be credited into your account at the end of every day."
+msgstr "Dapatkan komisi harian dari transaksi trading klien yang Anda referensikan pada platform %1 MetaTrader 5 (MT5). Total jumlah komisi akan dikreditkan ke dalam akun Anda setiap hari."
 
 msgid "Earn money for any verifiable errors that you find."
 msgstr "Dapatkan uang dengan beberapa error yang Anda temukan."
@@ -4466,7 +4478,7 @@ msgid "Enter the authentication code generated by the app below:"
 msgstr "Masukkan kode autentikasi yang dihasilkan oleh aplikasi di bawah ini:"
 
 msgid "Enter your MT5 password to add a %1 MT5 %2 account."
-msgstr ""
+msgstr "Masukkan kata sandi MT5 untuk menambahkan akun %1 MT5 %2. "
 
 msgid "Enter your email"
 msgstr "Masukkan alamat email Anda"
@@ -4826,10 +4838,10 @@ msgid "Expertise in the application of object-oriented programming languages (C+
 msgstr "Keahlian dalam aplikasi bahasa pemrograman berorientasi objek (C ++, Perl, dan Java), ditambah dengan kemampuan untuk menghasilkan kode berkualitas tinggi"
 
 msgid "Expiry date"
-msgstr "Tanggal berakhir"
+msgstr "Berlaku"
 
 msgid "Expiry date is required for %1."
-msgstr "Tanggal berakhir diperlukan untuk %1."
+msgstr "Masa berlaku diperlukan untuk %1."
 
 msgid "Expiry price"
 msgstr "Harga akhir"
@@ -4853,7 +4865,7 @@ msgid "Extensive experience in bug bounty programmes such as HackerOne, Bugcrowd
 msgstr "Pengalaman yang luas dalam bug bounty program seperti HackerOne, Bugcrowd, dan Cobalt"
 
 msgid "Extensive experience in creating interactive UI elements for web and mobile apps"
-msgstr "Pengalaman yang luas dalam membuat elemen UI interaktif untuk web dan aplikasi seluler"
+msgstr "Berpengalaman dalam pembuatan elemen UI interaktif untuk aplikasi web dan seluler"
 
 msgid "Extensive experience of JavaScript, HTML, CSS, AJAX, and JSON"
 msgstr "Pengalaman luas JavaScript, HTML, CSS, AJAX, dan JSON"
@@ -4942,9 +4954,6 @@ msgstr "Akrab dengan proses pengujian dan proses debug, termasuk pengujian unit 
 msgid "Familiarity with various JavaScript standards, libraries, frameworks, compilers, and transpilers including ES6, TypeScript, Babel, SystemJS, Web Workers, jQuery, React, and Angular"
 msgstr "Akrab dengan berbagai standar JavaScript, pustaka, kerangka kerja, kompiler, dan transpilers termasuk ES6, TypeScript, Babel, SystemJS, Web Workers, jQuery, React, dan Angular"
 
-msgid "Family name"
-msgstr "Nama belakang"
-
 msgid "FasaPay enables electronic money transfers for individuals and payment gateways for merchants. For more information, please visit %1."
 msgstr "FasaPay menyediakan transfer uang elektronik bagi individu dan juga sebagai gerbang pembayaran bagi para merchant. Untuk informasi lebih lanjut, silakan kunjungi %1."
 
@@ -4980,6 +4989,9 @@ msgstr "Fiat"
 
 msgid "Fiat Currency"
 msgstr "Mata Uang Fiat"
+
+msgid "Fiat currencies"
+msgstr "Mata uang fiat"
 
 msgid "Fifteen years on, and we're still innovating, growing and working on new ways to serve our customers better. For the first time, we offer short-term touch/no-touch trades and introduce a new charting application. We believe we have the most competitive and comprehensive digital options platform available to the retail public."
 msgstr "Sudah lima belas tahun dan kami terus berinovasi, berkembang dan berusaha menyediakan hal terbaru dalam memberikan pelayanan terbaik untuk pelanggan kami. Untuk pertama kalinya kami menawarkan kontrak jangka pendek touch/no-touch dan memperkenalkan aplikasi charting terbaru. Kami yakin bahwa kami memiliki platform trading paling kompetitif dan komprehensif yang tersedia di pasaran."
@@ -5080,8 +5092,8 @@ msgstr "Selesai"
 msgid "Firm grasp of advanced risk management concepts, including hedging, Greeks (first and second generation), Value at Risk models, etc."
 msgstr "Memahami konsep manajemen risiko tingkat lanjut, termasuk hedging, Greeks (generasi pertama dan kedua), model Nilai Risiko, dll."
 
-msgid "First line"
-msgstr "Baris pertama"
+msgid "First line of address"
+msgstr "Baris pertama alamat"
 
 msgid "First line of home address"
 msgstr "Alamat Rumah"
@@ -5173,8 +5185,8 @@ msgstr "Untuk kutipan valas, waktu penutupan ditentukan oleh Perusahaan seperti 
 msgid "For forex, a deal for 1 lot of EUR/USD will pay out EUR 2.5 in commission based on the following formula:"
 msgstr "Untuk forex, 1 lot EUR/USD akan memberi komisi sebesar EUR 2,5 berdasarkan formula berikut:"
 
-msgid "For forex, a deal for 1 lot of EUR/USD will pay out EUR 5 in commission based on the following formula:"
-msgstr "Untuk forex, 1 lot EUR/USD akan memberi komisi sebesar EUR 5 berdasarkan formula berikut:"
+msgid "For forex, a deal for 1 lot will pay out USD 2 in commission based on the following formula (using EUR/USD as an example):"
+msgstr ""
 
 msgid "For forex, your commission is represented in the base currency (EUR in the above example)."
 msgstr "Untuk forex, komisi Anda adalah berdasarkan mata uang dasar (EUR seperti contoh diatas)."
@@ -5243,7 +5255,7 @@ msgid "Forex trading involves buying or selling these \"currency pairs\". When y
 msgstr "Trading forex akan melibatkan pembelian dan penjualan \"pasangan mata uang\" ini. Ketika Anda membeli suatu pasangan mata uang seperti EUR/USD, berarti Anda membeli EURO dan menjual USD pada saat yang bersamaan."
 
 msgid "Forgot password?"
-msgstr ""
+msgstr "Lupa kata sandi?"
 
 msgid "Founded in 1999, %1 is one of the oldest and most respected names in online binary trading."
 msgstr "Didirikan pada tahun 1999, %1 merupakan salah satu nama tertua dan dihormati pada trading online binary."
@@ -5648,7 +5660,7 @@ msgid "Highlights"
 msgstr "Sorotan"
 
 msgid "Hint: You may have chosen a different MT5 password from your %1 log in password."
-msgstr ""
+msgstr "Petunjuk: Anda mungkin memilih kata sandi berbeda untuk mengakses akun MT5 dan %1 Anda."
 
 msgid "Historical Mediterranean island"
 msgstr "Pulau Mediterania yang bersejarah"
@@ -5773,6 +5785,12 @@ msgstr "Sumber Daya Manusia"
 msgid "I acknowledge that I am not a politically exposed person (PEP)."
 msgstr "Saya menyatakan bahwa saya bukan orang yang terlibat dengan politik (PEP)."
 
+msgid "I agree to the %1terms and conditions%2."
+msgstr "Saya setuju dengan %1syarat dan ketentuan%2."
+
+msgid "I am not a PEP, and I have not been a PEP in the last 12 months."
+msgstr "Saya bukan PEP, dan saya belum menjadi PEP dalam tempo 12 bulan terakhir."
+
 msgid "I forgot my password, what should I do?"
 msgstr "Saya lupa kata sandi, apa yang harus saya lakukan?"
 
@@ -5822,7 +5840,7 @@ msgid "IB programme FAQ"
 msgstr "FAQ Program IB"
 
 msgid "ID number"
-msgstr "Nomor identitas"
+msgstr "Nomer"
 
 msgid "ID number is required for %1."
 msgstr "Nomor identitas diperlukan untuk %1."
@@ -5864,7 +5882,7 @@ msgid "Identify new marketing opportunities through customer feedback and contri
 msgstr "Identifikasi peluang pemasaran baru melalui tanggapan pelanggan dan sumbangkan ide untuk memperluas basis pelanggan global kami"
 
 msgid "Identity card"
-msgstr "Kartu identitas"
+msgstr "KTP"
 
 msgid "If %1 is legally required to disclose the client's personal or financial information by law, regulation, or pursuant to the order of a court of competent jurisdiction or a governmental agency, the Company will promptly notify the client, as it deems appropriate, to give the client the opportunity to seek protection for the information. The Company will do so unless legally prohibited. Such required disclosure shall not be interpreted as a breach of this terms and conditions agreement."
 msgstr "Jika %1 secara hukum diharuskan untuk mengungkapkan informasi pribadi atau keuangan klien kepada hukum, peraturan, atau sesuai dengan perintah pengadilan dari yurisdiksi yang kompeten atau lembaga pemerintah, Perusahaan akan segera memberi tahu klien, jika dianggap perlu, untuk memberikan klien kesempatan untuk mencari perlindungan pada data informasi. Perusahaan akan melakukannya kecuali dilarang secara hukum. Pengungkapan yang disyaratkan seperti itu tidak akan ditafsirkan sebagai pelanggaran terhadap syarat dan ketentuan perjanjian ini."
@@ -6324,7 +6342,7 @@ msgid "In order to access Telegram Bot, please %1generate an API Token%2 and ent
 msgstr "Untuk mengakses Bot Telegram, silahkan hasilkan %1Token API%2 dan masukkan ke dalam box berikut."
 
 msgid "In order to access our mobile apps and other third-party applications, you'll first need to generate an API Token."
-msgstr "Untuk mengakses aplikasi mobile kami dan aplikasi pihak ketiga lainnya, Anda harus membuat Token API."
+msgstr "Untuk mengakses aplikasi seluler kami dan aplikasi pihak ketiga lainnya, Anda perlu membuat Token API."
 
 msgid "In order to access the cashier, we kindly request that you set a 30-day turnover limit for your account. Turnover is the total aggregate amount that is used to open trades. Therefore, this limit should be set to the total volume that you wish to trade with over 30 days."
 msgstr "Untuk mengakses bagian kasir, Anda perlu menyusun batasan turnover 30 hari akun Anda. Turnover adalah total jumlah pembelian kontrak. Maka, batasan harus disusun berdasarkan jumlah total yang ingin Anda tradingkan selama 30 hari."
@@ -6334,6 +6352,9 @@ msgstr "Untuk memperoleh keuntungan dari kurs trading, perlu dilakukan penutupan
 
 msgid "In providing IB services, the Introducing Broker shall"
 msgstr "Dalam menyediakan layanan IB, Introducing Broker harus"
+
+msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)."
+msgstr "Dalam memberikan pelayanan, kami diharuskan untuk memperoleh informasi dari Anda untuk memastikan apakah produk atau layanan yang diberikan adalah tepat untuk Anda (yaitu, apakah Anda memiliki pengalaman dan pengetahuan untuk memahami risiko yang terlibat)."
 
 msgid "In providing the Agent's services, the Agent shall do the following:"
 msgstr "Dalam memberikan layanan Agen, Agen harus melakukan hal berikut:"
@@ -6587,6 +6608,9 @@ msgstr "Pendapatan Investasi"
 msgid "Investment Products to EEA residents are provided by Deriv Investments (Europe) Limited (\"DIEL\"), which is authorised and regulated by the Malta Financial Services Authority under the Malta Investment Services Act to deal on own account in Investment Products."
 msgstr "Produk Investasi untuk penduduk EEA disediakan oleh Deriv Investments (Europe) Limited (\"DIEL\"), yang disahkan dan diatur oleh Otoritas Jasa Keuangan Malta berdasarkan Undang-Undang Layanan Investasi Malta untuk menangani akunnya sendiri dalam Produk Investasi."
 
+msgid "Investments & Dividends"
+msgstr "Investasi & Dividen"
+
 msgid "Investments &amp; Dividends"
 msgstr "Investasi &amp; Dividen"
 
@@ -6722,6 +6746,21 @@ msgstr "Jul"
 msgid "July"
 msgstr "Juli"
 
+msgid "Jump 10 Index"
+msgstr "Indeks Jump 10"
+
+msgid "Jump 100 Index"
+msgstr "Indeks Jump 100"
+
+msgid "Jump 25 Index"
+msgstr "Indeks Jump 25"
+
+msgid "Jump 50 Index"
+msgstr "Indeks Jump 50"
+
+msgid "Jump 75 Index"
+msgstr "Indeks Jump 75"
+
 msgid "Jun"
 msgstr "Juni"
 
@@ -6731,8 +6770,8 @@ msgstr "Juni"
 msgid "Jurisdiction"
 msgstr "Yurisdiksi"
 
-msgid "Jurisdiction and Choice of Law"
-msgstr "Yurisdiksi dan Pilihan Hukum"
+msgid "Jurisdiction and choice of law"
+msgstr "Yurisdiksi dan pilihan hukum"
 
 msgid "K. Event of Default"
 msgstr "K. Pelanggaran"
@@ -6871,6 +6910,9 @@ msgstr "Terakhir digunakan"
 
 msgid "Last digit stats for the latest %1 ticks on %2"
 msgstr "Statistik digit terakhir untuk %1 tik pada %2"
+
+msgid "Last name"
+msgstr "Nama belakang"
 
 msgid "Latest bank statement or any government-issued letter which contains your name and address"
 msgstr "Rekening koran terbaru atau surat yang dikeluarkan pemerintah yang berisi nama dan alamat Anda"
@@ -7212,7 +7254,7 @@ msgid "MT5 for macOS"
 msgstr "MT5 untuk macOS"
 
 msgid "MT5 password"
-msgstr ""
+msgstr "kata sandi MT5"
 
 msgid "MT5 real-money account for Synthetic Indices only."
 msgstr "Akun riil MT5 hanya tersedia untuk Indeks Sintetis."
@@ -7274,8 +7316,8 @@ msgstr "Pasangan mata uang mayor, minor, dan eksotis."
 msgid "Make a Deposit"
 msgstr "Lakukan Deposit"
 
-msgid "Make a deposit"
-msgstr "Lakukan deposit"
+msgid "Make a deposit now to start trading."
+msgstr "Deposit sekarang untuk memulai trading."
 
 msgid "Make a deposit or withdrawal on your account by buying and selling fiat currencies from anywhere in the world."
 msgstr "Lakukan deposit atau penarikan pada akun Anda dengan membeli dan menjual mata uang fiat di seluruh dunia."
@@ -7532,6 +7574,9 @@ msgstr "Ukuran upload maksimal untuk setiap file adalah %1"
 msgid "May"
 msgstr "Mei"
 
+msgid "Maybe later"
+msgstr "Mungkin nanti"
+
 msgid "Memorable date"
 msgstr "Tanggal bersejarah"
 
@@ -7645,9 +7690,6 @@ msgstr "Salah menggambarkan layanan yang diberikan Agen kepada klien"
 
 msgid "Mo"
 msgstr "Sen"
-
-msgid "Mobile number"
-msgstr "Nomor handphone"
 
 msgid "Modification/amendment"
 msgstr "Modifikasi/amandemen"
@@ -8237,6 +8279,9 @@ msgstr "Hanya huruf, spasi, tanda hubung, periode, dan apostrof diperbolehkan."
 msgid "Only one account is allowed per person. No withdrawals and/or refunds may be collected on accounts opened in false names or on multiple accounts opened by the same person."
 msgstr "Hanya satu akun riil per orang. Anda tidak dibenarkan untuk melakukan penarikan dana atau pengembalian jika akun didaftar menggunakan nama palsu atau jika Anda memiliki beberapa akun dimiliki oleh orang yang sama."
 
+msgid "Only use an address for which you have proof of residence"
+msgstr "Hanya gunakan alamat dimana Anda miliki bukti tempat tinggal"
+
 msgid "Only your face can be in the selfie"
 msgstr "Hanya wajah Anda yang bisa berada pada kolom selfie"
 
@@ -8348,6 +8393,9 @@ msgstr "Peringatan & Pengungkapan Regulasi Lainnya"
 msgid "Other best execution factors, such as speed of execution, likelihood of execution and settlement, size, nature, or any other considerations relevant to the execution of a particular order, may also be applied by DIEL in order to obtain the best possible results for the client."
 msgstr "Faktor eksekusi terbaik lainnya, seperti kecepatan eksekusi, kemungkinan eksekusi dan penyelesaian, ukuran, sifat, atau pertimbangan lain yang relevan dengan eksekusi order tertentu, juga dapat diterapkan oleh DIEL untuk mendapatkan hasil terbaik yang mungkin untuk klien."
 
+msgid "Other details"
+msgstr "Rincian lainnya"
+
 msgid "Other obligations"
 msgstr "Kewajiban lainnya"
 
@@ -8362,6 +8410,9 @@ msgstr "Tim Accounting &amp; Payments mengelola berbagai macam rekening bank dan
 
 msgid "Our Company"
 msgstr "Perusahaan Kami"
+
+msgid "Our MT5 servers are temporarily unavailable. We're working to restore them. Please try again in a few minutes."
+msgstr "Server MT5 kami untuk sementara tidak tersedia. Kami sedang melakukan perbaikan. Coba kembali beberapa saat lagi."
 
 msgid "Our MetaTrader 5 Financial STP account provides you with tight spreads, higher ticket size and offers more products."
 msgstr "Akun MetaTrader 5 Finansial STP menyediakan spread yang ketat, ukuran tiket yang lebih tinggi dan menawarkan produk yang lebih banyak."
@@ -8690,6 +8741,9 @@ msgstr "Personal Wealth Awards 2017"
 msgid "Personal details"
 msgstr "Data pribadi"
 
+msgid "Phone number"
+msgstr "Nomor telepon"
+
 msgid "Photo of your document"
 msgstr "Foto dokumen Anda"
 
@@ -8790,7 +8844,7 @@ msgid "Please check your email for the verification code to complete the process
 msgstr "Silakan lihat email Anda untuk melengkapi proses verifikasi."
 
 msgid "Please check your email for the verification link to complete the process."
-msgstr "Silakan lihat email Anda untuk melengkapi proses verifikasi."
+msgstr "Kami sudah mengirimkan tautan verifikasi ke alamat email Anda untuk proses selanjutnya."
 
 msgid "Please check your inbox for details."
 msgstr "Silakan periksa kotak masuk email Anda untuk rincian lebih lanjut."
@@ -8799,10 +8853,10 @@ msgid "Please choose a currency"
 msgstr "Silahkan pilih mata uang"
 
 msgid "Please click on the link in the email to change your MT5 password."
-msgstr ""
+msgstr "Klik pada tautan pada email Anda untuk merubah kata sandi MT5 Anda."
 
 msgid "Please click on the link in the email to change your binary password."
-msgstr ""
+msgstr "Silahkan klik pada link di email untuk merubah kata sandi binary Anda."
 
 msgid "Please click on the link in the email to reset your trading password."
 msgstr "Silahkan klik pada link di email untuk mereset kata sandi trading Anda."
@@ -8832,7 +8886,7 @@ msgid "Please confirm the transaction details in order to complete the transfer:
 msgstr "Pastikan Anda telah memilih Agen Pembayaran yang benar, salah transfer adalah diluar tanggungjawab kami:"
 
 msgid "Please contact us via %1live chat%2."
-msgstr "Silakan hubungi kami melalui %1obrolan langsung%2."
+msgstr "Mohon hubungi kami melalui %1obrolan langsung%2."
 
 msgid "Please contact your payment agent to validate your withdrawal request."
 msgstr "Silakan hubungi agen pembayaran untuk memproses permintaan penarikan Anda."
@@ -9458,6 +9512,9 @@ msgstr "Riil"
 msgid "Real Account"
 msgstr "Akun Riil"
 
+msgid "Real Account Opening"
+msgstr "Pendaftaran Akun Riil"
+
 msgid "Real Estate"
 msgstr "Perumahan"
 
@@ -9473,8 +9530,14 @@ msgstr "Pendaftaran Akun Uang Riil"
 msgid "Real Synthetic"
 msgstr "Riil Sintetis"
 
+msgid "Real accounts are not available to politically exposed persons (PEPs)."
+msgstr "Akun riil tidak tersedia untuk anggota politik (PEP)."
+
 msgid "Real accounts will be archived after %1 days of inactivity. The client can request for the reactivation of a real account via %2live chat%3."
 msgstr "Akun riil akan diarsipkan setelah tidak aktif selama %1 hari. Klien dapat meminta pengaktifan kembali akun riil melalui %2obrolan langsung%3."
+
+msgid "Real money account opening"
+msgstr "Pendaftaran akun uang riil"
 
 msgid "Real-Money Account"
 msgstr "Akun Uang Riil"
@@ -9816,7 +9879,7 @@ msgid "Reverse Side"
 msgstr "Bagian Belakang"
 
 msgid "Reverse side"
-msgstr "Sisi sebaliknya"
+msgstr "Bagian belakang"
 
 msgid "Reversed words aren't much harder to guess"
 msgstr "Kata-kata yang dieja terbalik juga tidak sulit untuk ditebak"
@@ -9886,6 +9949,9 @@ msgstr "Risiko slippage"
 
 msgid "Risk of stop order"
 msgstr "Risiko stop order"
+
+msgid "Risk warning"
+msgstr "Peringatan risiko"
 
 msgid "Risk warnings and notices related to Transactions and investments in the proposed instruments"
 msgstr "Peringatan risiko dan pemberitahuan terkait dengan transaksi dan investasi dalam instrumen yang diusulkan"
@@ -9983,8 +10049,8 @@ msgstr "Cari negara"
 msgid "Search..."
 msgstr "Cari..."
 
-msgid "Second line"
-msgstr "Baris kedua"
+msgid "Second line of address"
+msgstr "Baris kedua alamat"
 
 msgid "Secondary"
 msgstr "Sekunder"
@@ -10433,6 +10499,9 @@ msgstr "Manfaat Negara"
 msgid "State/Province"
 msgstr "Provinsi"
 
+msgid "State/province"
+msgstr "Kabupaten/provinsi"
+
 msgid "Stated limits are subject to change without prior notice."
 msgstr "Batas yang dinyatakan dapat berubah tanpa pemberitahuan terlebih dahulu."
 
@@ -10469,6 +10538,9 @@ msgstr "Kontrak Stays Between/Goes Outside"
 msgid "Step"
 msgstr "Langkah"
 
+msgid "Step %1: %2 (%1 of %3)"
+msgstr "Langkah %1: %2 (%1 dari %3)"
+
 msgid "Step 1"
 msgstr "Langkah 1"
 
@@ -10502,7 +10574,7 @@ msgstr "Langkah 3: Cara membeli pasangan mata uang kripto pertama Anda"
 msgid "Step 3: Make your trade"
 msgstr "Langkah 3: Lakukan Trading"
 
-msgid "Step Index"
+msgid "Step index"
 msgstr "Indeks Step"
 
 msgid "Step indices"
@@ -10665,7 +10737,7 @@ msgid "Submitting"
 msgstr "Mengirimkan"
 
 msgid "Success"
-msgstr ""
+msgstr "Sukses"
 
 msgid "Success!"
 msgstr "Sukses!"
@@ -10771,6 +10843,9 @@ msgstr "Indeks sintesis yang meniru volatilitas pasar."
 
 msgid "Synthetics"
 msgstr "Sintetis"
+
+msgid "Synthetics Account"
+msgstr "Akun Sintetis"
 
 msgid "System Administrator"
 msgstr "System Administrator"
@@ -10909,6 +10984,9 @@ msgstr "Syarat dan Ketentuan Persetujuan"
 
 msgid "Terms and conditions"
 msgstr "Syarat dan ketentuan"
+
+msgid "Terms of use"
+msgstr "Persyaratan pengguna"
 
 msgid "Tertiary"
 msgstr "Tersier"
@@ -12117,8 +12195,8 @@ msgstr "Berbagai faktor yang tercantum di atas tidak tercantum dalam urutan prio
 msgid "The financial trading services contained within this site are only suitable for clients who are able to bear the loss of all the money they invest and who understand and have experience of the risks involved in the acquisition of financial contracts."
 msgstr "Layanan trading keuangan yang terkandung dalam situs ini hanya cocok untuk klien yang mampu menanggung kehilangan semua dana yang mereka investasikan dan yang memahami serta memiliki pengalaman risiko yang terlibat dalam perolehan kontrak keuangan."
 
-msgid "The financial trading services contained within this site are only suitable for customers who accept the possibility of losing all the money they invest and who understand and have experience of the risk involved in the acquisition of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract premium."
-msgstr "Layanan trading keuangan yang disediakan dalam situs web ini hanya cocok bagi pelanggan yang menerima kenyataaan dimana mereka mungkin akan kehilangan semua dana yang telah diinvestasikan dan yang memahami serta memiliki pengalaman dengan risiko yang terlibat pada akuisisi kontrak keuangan. Bertransaksi pada kontrak keuangan sangat berisiko. Jika kontrak yang dibeli tidak menghasilkan, maka Anda akan menanggung kerugian pada investasi Anda, yaitu sejumlah harga beli kontrak."
+msgid "The financial trading services offered on this site are only suitable for customers who accept the possibility of losing all the money they invest and who understand and have experience of the risk involved in the purchase of financial contracts. Transactions in financial contracts carry a high degree of risk. If the contracts you purchased expire as worthless, you will lose all your investment, which includes the contract premium."
+msgstr "Layanan trading keuangan yang ditawarkan pada situs web ini hanya cocok bagi pelanggan yang menerima kenyataaan dimana mereka mungkin akan kehilangan semua dana yang telah diinvestasikan dan yang memahami serta memiliki pengalaman dengan risiko yang terlibat pada pembelian kontrak keuangan. Bertransaksi pada kontrak keuangan sangat berisiko. Jika kontrak yang Anda beli tidak menghasilkan, maka Anda akan kehilangan seluruh investasi Anda, termasuk harga beli kontrak."
 
 msgid "The first step is to set the parameters of your trade. There are five trade parameters you need to adjust in order to receive a price for the contract:"
 msgstr "Langkah pertama adalah menetapkan parameter trading Anda. Terdapat lima parameter trading yang Anda harus sesuaikan agar dapat menerima harga untuk kontrak:"
@@ -12685,10 +12763,10 @@ msgid "This page is only available to logged out clients."
 msgstr "Anda perlu keluar dari akun Anda terlebih dahulu untuk mengakses halaman ini."
 
 msgid "This password is for logging in to your Binary.com account."
-msgstr ""
+msgstr "Kata sandi ini adalah untuk mengakses akun Binary.com Anda."
 
 msgid "This password is for logging in to your MT5 accounts on the desktop, web, and mobile apps."
-msgstr ""
+msgstr "Kata sandi ini adalah untuk mengakses akun MT5 Anda pada desktop, web dan aplikasi seluler."
 
 msgid "This password is on the blacklist"
 msgstr "Kata sandi ini terdapat di daftar hitam"
@@ -12712,7 +12790,7 @@ msgid "This website's services are not made available in certain countries such 
 msgstr "Layanan situs web ini tidak tersedia di negara tertentu seperti Amerika Serikat, Kanada, Hong Kong, atau individu di bawah usia 18 tahun."
 
 msgid "This will change the password to all of your MT5 accounts."
-msgstr ""
+msgstr "Ini akan mengubah kata sandi untuk semua akun MT5 Anda."
 
 msgid "Thorough knowledge of bash scripting, and experience with the Perl scripting language"
 msgstr "Memiliki pengetahuan menyeluruh tentang bash scripting, dan pengalaman dengan bahasa skrip Perl"
@@ -12777,6 +12855,9 @@ msgstr "Tips:"
 msgid "Title"
 msgstr "Gelar"
 
+msgid "Title and name"
+msgstr "Gelar dan nama"
+
 msgid "To"
 msgstr "Hingga"
 
@@ -12789,8 +12870,29 @@ msgstr "Untuk melamar, kirimkan CV dan surat lamaran ke %1"
 msgid "To be able to trade OTC instruments available on the MT5 trading platform, the client has to first"
 msgstr "Untuk dapat bertrading instrumen OTC yang tersedia pada platform trading MT5, klien harus terlebih dahulu"
 
+msgid "To change your country of residence, email, or tax information, please contact %1Customer Support%2."
+msgstr "Untuk merubah negara domisili, email atau informasi pajak Anda, mohon hubungi %1Customer Support%2."
+
+msgid "To change your country of residence, or email, please contact %1Customer Support%2."
+msgstr "Untuk merubah negara domisili Anda atau email, mohon hubungi %1Customer Support%2."
+
+msgid "To change your date of birth, country of residence, email, or tax information, please contact %1Customer Support%2."
+msgstr "Untuk merubah tanggal lahir, negara domisili, email atau informasi pajak Anda, mohon hubungi %1Customer Support%2."
+
+msgid "To change your date of birth, country of residence, or email, please contact %1Customer Support%2."
+msgstr "Untuk merubah tanggal lahir, negara domisili atau email, mohon hubungi %1Customer Support%2."
+
+msgid "To change your name, country of residence, email, or tax information, please contact %1Customer Support%2."
+msgstr "Untuk merubah nama, negara domisili, email atau informasi pajak Anda, mohon hubungi %1Customer Support%2."
+
+msgid "To change your name, country of residence, or email, please contact %1Customer Support%2."
+msgstr "Untuk merubah nama, negara domisili, atau email, mohon hubungi %1Customer Support%2."
+
 msgid "To change your name, date of birth, country of residence, email, or tax information, please contact %1Customer Support%2."
 msgstr "Untuk merubah nama, tanggal lahir, negara domisili, email atau informasi pajak Anda, silahkan hubungi %1Customer Support%2."
+
+msgid "To change your name, date of birth, country of residence, or email, please contact %1Customer Support%2."
+msgstr "Untuk merubah nama, tanggal lahir dan negara domisili Anda atau email, mohon hubungi %1Customer Support%2."
 
 msgid "To create a MetaTrader 5 account:"
 msgstr "Untuk mendaftar akun MetaTrader 5:"
@@ -12942,6 +13044,9 @@ msgstr "Pariwisata"
 msgid "Town/City"
 msgstr "Kota"
 
+msgid "Town/city"
+msgstr "Kota"
+
 msgid "Track and document thoroughly the bugs that you find"
 msgstr "Melacak dan mendokumentasikan dengan seksama bug yang Anda temukan"
 
@@ -12979,7 +13084,7 @@ msgid "Trade binary options on a wide range of underlying markets with limited r
 msgstr "Bertrading opsi binary pada berbagai macam pasar dasar dengan risiko terbatas."
 
 msgid "Trade binary options on a wide range of web and mobile apps. Each comes with unique strengths that complement a variety of trading strategies."
-msgstr "Trading opsi binary pada berbagai pilihan aplikasi situs dan mobile. Masing-masing memiliki kekuatan unik yang melengkapi berbagai strategi trading."
+msgstr "Trading opsi binary pada berbagai pilihan aplikasi web dan seluler. Masing-masing memiliki kekuatan unik yang melengkapi berbagai strategi trading."
 
 msgid "Trade confidently, knowing that your personal data, transactions, and funds are always secure."
 msgstr "Bertradinglah dengan percaya diri, ketahui data pribadi, transaksi dan dana Anda akan selalu aman."
@@ -13362,6 +13467,12 @@ msgstr "USD 1"
 msgid "USD 10"
 msgstr "USD 10"
 
+msgid "USD 2"
+msgstr "USD 2"
+
+msgid "USD 4"
+msgstr "USD 4"
+
 msgid "USD Coin"
 msgstr "USD Coin"
 
@@ -13579,10 +13690,10 @@ msgid "Use their best endeavours to attract potential clients for Binary"
 msgstr "Menggunakan upaya terbaik mereka untuk menarik klien potensial ke Binary"
 
 msgid "Use this password to grant viewing access to another user. While they may view your trading account, they will not be able to trade or take any other actions. Click Create or reset password, if this is your first investor password or if you've forgotten your password."
-msgstr ""
+msgstr "Gunakan kata sandi ini untuk memberikan akses pada pengguna lain. Meskipun mereka dapat melihat akun trading Anda, mereka tidak akan dapat bertrading atau melakukan aktifitas lain. Klik Membuat atau atur ulang kata sandi, jika ini adalah kata sandi investor pertama Anda atau jika Anda lupa kata sandi Anda."
 
 msgid "Use this password to log in to your MT5 accounts on the desktop, web, and mobile apps."
-msgstr ""
+msgstr "Gunakan kata sandi ini untuk mengakses akun MT5 Anda melalui desktop, web dan aplikasi seluler."
 
 msgid "Use to the utmost benefit any possible additional features that some payment processors offer"
 msgstr "Memanfaatkan sebaik baiknya fungsi tambahan yang ditawarkan dari beberapa prosesor pembayaran"
@@ -14433,6 +14544,9 @@ msgstr "XMR/USD"
 msgid "XRP/USD"
 msgstr "XRP/USD"
 
+msgid "XTB International Limited (XTB)"
+msgstr "XTB International Limited (XTB)"
+
 msgid "Yes"
 msgstr "Ya"
 
@@ -14539,10 +14653,13 @@ msgid "You expect the %1 to rise in value so you can sell it back for a profit."
 msgstr "Anda mengharapkan %1 naik nilainya sehingga Anda bisa menjualnya kembali untuk mendapatkan keuntungan."
 
 msgid "You have a new Binary password to log in to Binary.com."
-msgstr ""
+msgstr "Anda memiliki kata sandi baru untuk mengakses Binary.com."
 
 msgid "You have a new MT5 password to log in to your MT5 accounts on the web and mobile apps."
-msgstr ""
+msgstr "Anda memiliki kata sandi MT5 baru untuk mengakses akun MT5 Anda melalui web dan aplikasi seluler."
+
+msgid "You have added a %1 account."
+msgstr "Anda telah mendaftar akun %1."
 
 msgid "You have already withdrawn %1%2 in aggregate over the last %3 days."
 msgstr "Anda telah menarik %1%2 secara total selama %3 terakhir."
@@ -14559,8 +14676,8 @@ msgstr "Anda memiliki saldo pada akun Binary ini:"
 msgid "You have funds in these MT5 accounts:"
 msgstr "Anda memiliki saldo pada akun MT5 ini:"
 
-msgid "You have insufficient funds in your Binary account, please <a href=\"%1\">add funds</a>."
-msgstr "Anda tidak memiliki dana yang cukup di akun Binary Anda, silahkan <a href=\"%1\">tambah dana</a>."
+msgid "You have insufficient funds in your Binary account, please <a class=\"insufficient-funds-error-link\" href=\"%1\">add funds</a>."
+msgstr "Anda tidak memiliki dana yang cukup pada akun Binary Anda, mohon <a class=\"insufficient-funds-error-link\" href=\"%1\">tambah dana</a>."
 
 msgid "You have insufficient funds in your MT5 account."
 msgstr "Dana tidak mencukupi pada akun MT5 Anda."
@@ -14594,9 +14711,6 @@ msgstr "Anda telah berhasil mengubah mata uang akun Anda dari %1 ke %2."
 
 msgid "You have successfully created your Demo Account."
 msgstr "Anda telah berhasil mendaftar Akun Demo Anda."
-
-msgid "You have successfully created your real money %1account."
-msgstr "Anda telah berhasil mendaftar %1akun uang riil Anda."
 
 msgid "You have successfully disabled two-factor authentication for your account."
 msgstr "Anda telah berhasil menonaktifkan autentikasi dua faktor pada akun Anda."
@@ -14694,6 +14808,9 @@ msgstr "Anda akan memperjelas layanan Anda dan menghasilkan peluang bisnis baru.
 msgid "You will need to set a password to complete the process."
 msgstr "Anda perlu mengatur kata sandi untuk menyelesaikan proses."
 
+msgid "You will not be able to change currency once you have made a deposit."
+msgstr "Anda tidak akan dapat mengubah mata uang akun setelah melakukan deposit."
+
 msgid "You will not be able to change your fiat account's currency after creating this MT5 account. Are you sure you want to proceed?"
 msgstr "Anda tidak akan dapat merubah mata uang akun fiat Anda setelah mendaftar akun MT5. Apa Anda yakin ingin melanjutkan?"
 
@@ -14725,7 +14842,7 @@ msgid "You're using a Demo Account."
 msgstr "Anda sedang menggunakan Akun Demo."
 
 msgid "You're using your %1 account to log in to your Binary.com account. To change your login method into using a username and password, click the %2Unlink%3 button."
-msgstr ""
+msgstr "Anda menggunakan akun %1 untuk mengakses akun Binary.com Anda. Untuk mengakses menggunakan nama pengguna dan kata sandi, klik tombol %2Batalkan tautan%3."
 
 msgid "You've carried out significant transactions on markets similar to the ones we offer, averaging 10 transactions per quarter for the previous four quarters"
 msgstr "Anda telah melakukan transaksi signifikan pada pasar yang serupa dengan penawaran yang kami tawarkan, rata-rata 10 transaksi per kuartal untuk empat kuartal sebelumnya"
@@ -15016,7 +15133,7 @@ msgid "days"
 msgstr "hari"
 
 msgid "demo"
-msgstr ""
+msgstr "demo"
 
 msgid "demo credit to account"
 msgstr "saldo demo kedalam akun"
@@ -15038,9 +15155,6 @@ msgstr "misalnya frontend.binaryws.com"
 
 msgid "for account %1"
 msgstr "pada akun %1"
-
-msgid "gaming"
-msgstr "gaming"
 
 msgid "hour"
 msgstr "jam"
@@ -15091,7 +15205,7 @@ msgid "ratio of Account Equity to Total Margin, expressed as a percentage"
 msgstr "rasio dari Akun Ekuitas pada Total Margin, dinyatakan dalam persen"
 
 msgid "real"
-msgstr ""
+msgstr "riil"
 
 msgid "regulated by the Malta Financial Services Authority (MFSA),"
 msgstr "diatur oleh Otoritas Jasa Keuangan Malta (MFSA),"
