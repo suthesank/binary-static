@@ -216,6 +216,8 @@ const BinaryLoader = (() => {
             Client.isAccountOfType('financial')
                 || Client.isOptionsBlocked()
                 || ClientBase.get('residence') === 'fr'
+                || ClientBase.get('residence') === 'gb'
+                || ClientBase.get('residence') === 'im'
                 ? ''
                 : content.getElementsByTagName('h1')[0] || '';
         const div_container = createElement('div', { class: 'logged_out_title_container', html: base_html_elements });
