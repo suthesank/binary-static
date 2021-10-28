@@ -53,9 +53,9 @@ const Layout = () => {
                     <div id='content-holder'>
                         <MobileMenu />
                         <a href='javascript:;' id='scrollup' />
-                        <GameCloseBanner className="container" />
-                        <GameCloseBannerIom className="container"/>
-                        <InnerContent/>
+                        <GameCloseBanner />
+                        <GameCloseBannerIom />
+                        <InnerContent />
                     </div>
                     <Footer />
                 </div>
