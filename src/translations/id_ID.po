@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-11-03 06:15\n"
+"PO-Revision-Date: 2021-11-18 08:15\n"
 "Last-Translator: \n"
 "Language-Team: Indonesian\n"
 "MIME-Version: 1.0\n"
@@ -2263,6 +2263,9 @@ msgstr "Binary.com Graduate Program"
 msgid "Binary.com in Numbers"
 msgstr "Binary.com dalam Angka"
 
+msgid "Binary.com is moving to Deriv on 30 November"
+msgstr "Binary.com berpindah ke Deriv pada 30 November"
+
 msgid "Binary.com recommends 1.1.1.1"
 msgstr "Binary.com merekomendasikan 1.1.1.1"
 
@@ -3979,8 +3982,8 @@ msgstr "Deriv Investments (Europe) Limited."
 msgid "Deriv Limited"
 msgstr "Deriv Limited"
 
-msgid "Deriv Limited, with registered office at 47 Esplanade, St Helier, Jersey JE1 0BD, Channel Islands, is the holding company for the subsidiaries listed below."
-msgstr "Deriv Limited, yang beralamat di 47 Esplanade, St Helier, Jersey JE1 0BD, Channel Islands, adalah perusahaan induk dari anak perusahaan yang tercantum di bawah ini."
+msgid "Deriv Limited, with registered office at 13 Castle Street, St. Helier, JE2 3BT, Jersey, is the holding company for the subsidiaries listed below."
+msgstr ""
 
 msgid "Deriv.com launched"
 msgstr "Deriv.com diluncurkan"
@@ -10580,6 +10583,9 @@ msgstr "Waktu mulai"
 msgid "Start trading"
 msgstr "Mulai trading"
 
+msgid "Start using Deriv with your Binary.com email and password."
+msgstr "Mulai gunakan Deriv menggunakan email dan kata sandi Binary.com."
+
 msgid "State Benefits"
 msgstr "Manfaat Negara"
 
@@ -13235,6 +13241,9 @@ msgstr "Bertrading logam dengan spread tetap dan variabel yang kompetitif."
 
 msgid "Trade now"
 msgstr "Trading sekarang"
+
+msgid "Trade on Deriv"
+msgstr "Trading pada Deriv"
 
 msgid "Trade on underlying markets that include forex, stock indices, commodities, and more."
 msgstr "Bertrading pada pasar dasar yang meliputi forex, indeks saham, komoditas, dan banyak lagi."

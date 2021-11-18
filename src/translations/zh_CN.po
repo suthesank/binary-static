@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-11-02 07:21\n"
+"PO-Revision-Date: 2021-11-18 08:15\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -2263,6 +2263,9 @@ msgstr "Binary.com 研究生课程"
 msgid "Binary.com in Numbers"
 msgstr "Binary.com 的统计数字"
 
+msgid "Binary.com is moving to Deriv on 30 November"
+msgstr "Binary.com  将于11月 30 日迁至 Deriv"
+
 msgid "Binary.com recommends 1.1.1.1"
 msgstr "Binary.com推荐 1.1.1.1"
 
@@ -3980,8 +3983,8 @@ msgstr "Deriv Investments (Europe) Limited."
 msgid "Deriv Limited"
 msgstr "Deriv 有限公司"
 
-msgid "Deriv Limited, with registered office at 47 Esplanade, St Helier, Jersey JE1 0BD, Channel Islands, is the holding company for the subsidiaries listed below."
-msgstr "Deriv 有限公司的注册办事处位于 47 Esplanade, St. Helier, Jersey, JE 0BD Channel Islands，为下列子公司的控股公司。"
+msgid "Deriv Limited, with registered office at 13 Castle Street, St. Helier, JE2 3BT, Jersey, is the holding company for the subsidiaries listed below."
+msgstr ""
 
 msgid "Deriv.com launched"
 msgstr "Deriv.com 已推出"
@@ -10581,6 +10584,9 @@ msgstr "开始时间"
 msgid "Start trading"
 msgstr "开始交易"
 
+msgid "Start using Deriv with your Binary.com email and password."
+msgstr "用您的 Binary.com 电子邮件和密码开始使用 Deriv。"
+
 msgid "State Benefits"
 msgstr "国家收益"
 
@@ -13236,6 +13242,9 @@ msgstr "透过有竞争力的固定和可变价差交易金属"
 
 msgid "Trade now"
 msgstr "即刻交易"
+
+msgid "Trade on Deriv"
+msgstr "在 Deriv 交易"
 
 msgid "Trade on underlying markets that include forex, stock indices, commodities, and more."
 msgstr "在包括外汇、股票指数、商品等在内的基本市场交易。"
