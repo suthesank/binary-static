@@ -19,6 +19,7 @@ const ClientBase            = require('../../_common/base/client_base');
 const GTM                   = require('../../_common/base/gtm');
 const LiveChat              = require('../../_common/base/livechat');
 const Login                 = require('../../_common/base/login');
+const toTitleCase           = require('../../_common/string_util').toTitleCase;
 
 const BinaryLoader = (() => {
     let container;
@@ -57,7 +58,8 @@ const BinaryLoader = (() => {
         const urlParams = new URLSearchParams(window.location.search);
         const qa_server = urlParams.get('qa_server');
         const app_id = urlParams.get('app_id');
-        if (qa_server && app_id) {
+        const URL_regex = /^(?:https?:\/\/)?(?!www | www\.)[A-Za-z0-9_-]+\.+[A-Za-z0-9.\/%&=\?_:;-]+$/i;
+        if (qa_server && app_id && URL_regex.test(qa_server) && !isNaN(app_id)) {
             localStorage.setItem('config.server_url', qa_server);
             localStorage.setItem('config.app_id', app_id);
         }
@@ -197,8 +199,19 @@ const BinaryLoader = (() => {
                 }
             }
         });
+        // TODO: temporary condition; remove once BE Apple social signup is ready
+        BinarySocket.wait('get_account_status').then((response) => {
+            const { status, social_identity_provider } = response.get_account_status;
+            const social_signup_identifier             = toTitleCase(social_identity_provider);
+            const social_signup                        = status.includes('social_signup');
+            const no_mt5_pass                          = status.includes('mt5_password_not_set');
+            const account_pass_page                    = getElementById('change_password');
 
-        BinarySocket.setOnDisconnect(active_script.onDisconnect);
+            if (config.is_social && social_signup && no_mt5_pass && social_signup_identifier === 'Apple') {
+                $(account_pass_page).setVisibility(0);
+            }
+        });
+        BinarySocket.setOnDisconnect(active_script && active_script.onDisconnect);
     };
 
     const loadActiveScript = (config) => {

@@ -3,19 +3,11 @@ import Analysis from './analysis.jsx';
 import Portfolio from '../user/portfolio.jsx';
 import Loading from '../../_common/components/loading.jsx';
 import DerivBanner from '../../_common/components/deriv_banner.jsx';
-import GameCloseBanner from '../../_common/components/game_close_banner.jsx';
-import GameCloseBannerIom from '../../_common/components/game_close_banner_iom.jsx';
-import GamingClosePopup from '../../_common/components/gaming_close_popup.jsx';
-import GamingClosePopupIom from '../../_common/components/gaming_close_popup_iom.jsx';
 
 const Trading = () => (
     <React.Fragment>
         <div id='trading_socket_container'>
             <DerivBanner />
-            <GameCloseBanner />
-            <GameCloseBannerIom />
-            <GamingClosePopup />
-            <GamingClosePopupIom />
             <div id='notifications_wrapper' />
             <div id='loading_container' className='overlay_container' />
             <a id='deposit_btn_trade' className='client_real invisible gr-hide-m button' href={it.url_for('cashier/forwardws?action=deposit')}>
@@ -75,6 +67,7 @@ const Trading = () => (
                                                 <span id='duration_tooltip'>{it.L('Minimum:')}</span> <span id='duration_minimum' />
                                                 <span id='duration_maximum' className='invisible' />
                                             </div>
+                                            <span id='duration_stock_indices' className='invisible hint'>{it.L('Should be 1')}</span>
                                             <div id='expiry_type_endtime'>
                                                 <input id='expiry_date' type='text' data-lpignore='true' readOnly='readonly' autoComplete='off' />
                                                 <div id='expiry_time_row'>
